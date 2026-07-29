@@ -87,34 +87,7 @@ export default function VillageProfile() {
             </div>
           </div>
 
-          {/* 3. PETA SATELIT WILAYAH */}
-          <div className="bg-surface-container-lowest p-8 lg:p-12 rounded-[32px] border border-outline-variant/20 shadow-sm">
-            <h4 className="text-2xl font-bold text-on-surface mb-2 flex items-center gap-3">
-              <IconMapPin className="text-primary text-3xl" /> Peta Satelit & Garis Batas Kelurahan
-            </h4>
-            <p className="text-on-surface-variant mb-8 leading-relaxed">
-              Citra satelit wilayah Kelurahan Tamangapa yang memetakan secara jelas batas-batas administratif, area permukiman warga, serta kondisi tutupan lahan di sekitar wilayah TPA Antang.
-            </p>
-            
-            <div className="w-full aspect-video md:h-[500px] rounded-2xl overflow-hidden border border-outline-variant/20 relative group bg-surface-container">
-              {/* Gambar ini adalah placeholder, mahasiswa KKN biasanya menggunakan peta hasil ArcGIS/QGIS mereka sendiri */}
-              <img 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" 
-                alt="Peta Satelit Wilayah Tamangapa" 
-                className="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-              />
-              
-              {/* Label Bantuan untuk User */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="bg-black/70 text-white px-6 py-4 rounded-2xl font-bold backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity text-center">
-                  <p className="mb-2">🗺️ Peta Geospasial Tamangapa</p>
-                  <p className="text-sm font-normal text-white/80 max-w-sm">
-                    Ganti gambar ini dengan hasil peta citra satelit (ArcGIS/QGIS) yang telah Anda buat, yang menampilkan garis batas poligon kelurahan berwarna terang (merah/kuning).
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+
 
           {/* 4. BATAS WILAYAH & PEMERINTAHAN (2 Kolom) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

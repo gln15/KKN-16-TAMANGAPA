@@ -12,7 +12,7 @@ export default function MappingSurvey() {
         </div>
 
         {/* Peta Kewilayahan & Buffer Zone */}
-        <div className="mb-20">
+        <div className="mb-10">
           <h2 className="text-3xl font-bold text-on-surface mb-8 border-b border-outline-variant/20 pb-4">
             Pemetaan Geospasial Wilayah
           </h2>
@@ -63,53 +63,6 @@ export default function MappingSurvey() {
               </div>
             </div>
 
-          </div>
-        </div>
-
-        {/* Hasil Survei Lapangan */}
-        <div>
-          <h2 className="text-3xl font-bold text-on-surface mb-8 border-b border-outline-variant/20 pb-4">
-            Hasil Survei Pendahuluan
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <div className="bg-primary/5 p-8 rounded-3xl border border-primary/20">
-              <div className="text-5xl font-extrabold text-primary mb-4">[85]%</div>
-              <h3 className="font-bold text-on-surface text-lg mb-2">Belum Memilah Sampah</h3>
-              <p className="text-sm text-on-surface-variant">
-                Sebagian besar warga masih membuang sampah organik dan anorganik dalam satu wadah yang sama tanpa pemilahan awal.
-              </p>
-            </div>
-
-            <div className="bg-error/5 p-8 rounded-3xl border border-error/20">
-              <div className="text-5xl font-extrabold text-error mb-4">[60]%</div>
-              <h3 className="font-bold text-on-surface text-lg mb-2">Keluhan Bau TPA</h3>
-              <p className="text-sm text-on-surface-variant">
-                Warga di radius terdekat melaporkan gangguan polusi udara (bau menyengat) terutama saat musim hujan dan angin kencang.
-              </p>
-            </div>
-
-            <div className="bg-tertiary/5 p-8 rounded-3xl border border-tertiary/20">
-              <div className="text-5xl font-extrabold text-tertiary mb-4">[10]%</div>
-              <h3 className="font-bold text-on-surface text-lg mb-2">Pengetahuan Daur Ulang</h3>
-              <p className="text-sm text-on-surface-variant">
-                Hanya sebagian kecil masyarakat yang telah mengetahui dan mempraktikkan pengolahan sampah seperti Eco Enzym atau komposter.
-              </p>
-            </div>
-
-          </div>
-
-          <div className="mt-8 bg-surface-container p-8 rounded-3xl flex flex-col lg:flex-row gap-8 items-center border border-outline-variant/20">
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-on-surface mb-4">Analisis Masalah & Kebutuhan</h3>
-              <p className="text-on-surface-variant leading-relaxed mb-4">
-                [Anda bisa menambahkan penjelasan panjang berupa narasi hasil survei Anda di sini. Jelaskan metode pengumpulan data Anda (kuesioner/wawancara tokoh masyarakat/observasi langsung) dan kesimpulan yang ditarik.]
-              </p>
-              <p className="text-on-surface-variant leading-relaxed">
-                Dari data di atas, terlihat jelas urgensi untuk melakukan sosialisasi dan pendampingan masif terkait pengolahan limbah mandiri skala rumah tangga guna mengurangi beban TPA Antang secara perlahan.
-              </p>
-            </div>
           </div>
         </div>
 
