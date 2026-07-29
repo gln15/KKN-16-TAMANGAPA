@@ -53,7 +53,7 @@ export default function Gallery() {
   };
 
   return (
-    <section className="px-margin-desktop pt-8 pb-12 max-w-container-max mx-auto">
+    <section className="px-margin-desktop pt-4 pb-12 max-w-container-max mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
         <div className="space-y-2">
           <h1 className="font-headline-xl text-headline-xl text-primary">Galeri & Evaluasi Kegiatan</h1>

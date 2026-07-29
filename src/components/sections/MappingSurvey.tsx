@@ -1,6 +1,6 @@
 export default function MappingSurvey() {
   return (
-    <div className="pt-8 pb-20 px-margin-desktop bg-surface min-h-screen">
+    <div className="pt-4 pb-20 px-margin-desktop bg-surface min-h-screen">
       <div className="max-w-container-max mx-auto">
         
         {/* Header */}

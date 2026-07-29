@@ -4,8 +4,11 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: "Desa Bersih | KKN Thematic",
+  title: "Desa Bersih | KKN Tematik",
   description: "Sustainable Waste Processing in Tamangapa",
+  icons: {
+    icon: "/images/logo.jpeg",
+  }
 };
 
 export default function RootLayout({

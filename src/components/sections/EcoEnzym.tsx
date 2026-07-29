@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CheckCircle2, XCircle, Droplets, HeartPulse, Sprout } from "lucide-react";
 
 export default function EcoEnzym() {
   const [containerVolume, setContainerVolume] = useState<number | "">("");
@@ -11,186 +12,206 @@ export default function EcoEnzym() {
   const organicGrams = volume > 0 ? (volume * 180).toFixed(0) : "0";
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-surface" id="eco-enzym">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-0 pb-24 px-6 md:px-12 bg-surface" id="eco-enzym">
+      <div className="max-w-7xl mx-auto flex flex-col gap-16">
+        
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row items-center gap-6 mb-16 text-center md:text-left">
-          <div className="w-20 h-20 rounded-3xl bg-primary-container flex items-center justify-center text-on-primary-container shadow-lg shadow-primary/20 transform hover:scale-105 transition-all duration-300">
-            <span className="font-bold text-3xl">EE</span>
-          </div>
-          <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-3">
-              Produksi Eco-Enzyme
-            </h2>
-            <p className="text-lg text-on-surface-variant max-w-2xl">
-              Cairan ajaib serbaguna hasil fermentasi limbah organik dapur Anda. Solusi alami untuk lingkungan yang lebih bersih dan sehat.
-            </p>
-          </div>
+        <div className="text-center space-y-6 max-w-4xl mx-auto pt-8">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-on-surface">
+            Apa itu <span className="text-primary">Eco-Enzyme</span>?
+          </h1>
+          <p className="text-lg text-on-surface-variant leading-relaxed">
+            Eco-enzyme merupakan cairan serbaguna hasil fermentasi kulit buah/sayuran, gula, dan air selama 3 bulan atau lebih, yang dapat digunakan untuk berbagai keperluan rumah tangga dan lingkungan.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          {/* Kalkulator Card */}
-          <div className="lg:col-span-3 bg-surface-container-lowest p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-outline-variant/30 hover:shadow-2xl transition-shadow duration-500 relative overflow-hidden group">
-            {/* Background decoration */}
-            <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 group-hover:bg-primary/10 transition-colors duration-500"></div>
+        {/* Sampah Dapur yang Ada di Rumah */}
+        <div>
+          <h2 className="text-3xl font-bold text-on-surface text-center mb-10">Sampah Dapur yang Ada di Rumah</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             
-            <h3 className="text-2xl font-bold text-primary mb-8 flex items-center gap-3">
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-              Kalkulator Kebutuhan Bahan
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-              <div className="md:col-span-4 flex flex-col justify-center gap-3">
-                <label htmlFor="volume" className="text-sm font-bold text-on-surface-variant uppercase tracking-wider">
-                  Kapasitas Wadah (Liter)
-                </label>
-                <div className="relative">
-                  <input
-                    id="volume"
-                    type="number"
-                    min="0"
-                    step="any"
-                    value={containerVolume}
-                    onChange={(e) => setContainerVolume(e.target.value === "" ? "" : Number(e.target.value))}
-                    className="w-full p-5 text-2xl font-bold rounded-2xl border-2 border-outline-variant bg-surface focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/20 transition-all duration-300 text-on-surface"
-                    placeholder="Contoh: 10"
-                  />
-                  <div className="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant/50 font-bold">
-                    LITER
-                  </div>
-                </div>
-                <p className="text-sm text-on-surface-variant/80 mt-2 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path></svg>
-                  Air otomatis dihitung 60% dari kapasitas wadah agar tersisa ruang untuk gas fermentasi.
-                </p>
+            <div className="bg-green-50 dark:bg-green-900/20 rounded-[2.5rem] p-8 border border-green-200 dark:border-green-800 shadow-sm h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6 bg-green-100 dark:bg-green-800/50 p-4 rounded-xl mx-auto w-full sm:w-fit text-center">
+                <CheckCircle2 className="w-6 h-6 text-green-700 dark:text-green-400 flex-shrink-0" />
+                <h3 className="text-lg md:text-xl font-bold text-green-800 dark:text-green-300">Bisa Dibuat Eco-Enzyme</h3>
               </div>
-
-              <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="p-6 rounded-3xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/50 flex flex-col items-center justify-center text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-sm">
-                  <span className="text-sm font-bold text-blue-600 dark:text-blue-400 mb-2 uppercase tracking-wide">Air Bersih</span>
-                  <div className="text-5xl font-black text-blue-700 dark:text-blue-300 drop-shadow-sm">
-                    {waterLiters}
-                  </div>
-                  <span className="text-sm font-bold text-blue-600 dark:text-blue-400 mt-2 bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">Liter</span>
-                </div>
-                <div className="p-6 rounded-3xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 flex flex-col items-center justify-center text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-sm">
-                  <span className="text-sm font-bold text-amber-700 dark:text-amber-500 mb-2 uppercase tracking-wide">Gula Merah / Molase</span>
-                  <div className="text-5xl font-black text-amber-800 dark:text-amber-400 drop-shadow-sm">
-                    {sugarGrams}
-                  </div>
-                  <span className="text-sm font-bold text-amber-700 dark:text-amber-500 mt-2 bg-amber-100 dark:bg-amber-800 px-3 py-1 rounded-full">Gram</span>
-                </div>
-                <div className="p-6 rounded-3xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800/50 flex flex-col items-center justify-center text-center transform hover:-translate-y-2 transition-transform duration-300 shadow-sm">
-                  <span className="text-sm font-bold text-green-700 dark:text-green-500 mb-2 uppercase tracking-wide">Bahan Organik</span>
-                  <div className="text-5xl font-black text-green-800 dark:text-green-400 drop-shadow-sm">
-                    {organicGrams}
-                  </div>
-                  <span className="text-sm font-bold text-green-700 dark:text-green-500 mt-2 bg-green-100 dark:bg-green-800 px-3 py-1 rounded-full">Gram</span>
-                </div>
+              <p className="text-green-900 dark:text-green-100 mb-6 font-semibold text-center">Limbah buah dan sayuran yang masih segar, seperti:</p>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {["Kulit buah jeruk", "Lemon", "Bonggol nanas", "Mangga", "Apel", "Pir", "Semangka", "Melon", "Pisang", "Pepaya", "Buah naga", "Salak", "Anggur", "Sayuran", "Kulit wortel", "Kentang", "Mentimun", "Kol", "Sawi", "Sereh", "Selada"].map(item => (
+                  <span key={item} className="px-4 py-2 bg-green-200 dark:bg-green-800/50 text-green-900 dark:text-green-100 rounded-full text-sm font-medium">{item}</span>
+                ))}
               </div>
             </div>
-          </div>
 
-          {/* Materials Section */}
-          <div className="lg:col-span-1 bg-surface-container-lowest p-8 rounded-3xl shadow-md border border-outline-variant/30 flex flex-col gap-6 hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-2xl font-bold text-primary flex items-center gap-3">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
-              Komposisi Standar
-            </h3>
-            
-            <div className="overflow-hidden rounded-2xl border border-outline-variant/30">
-              <table className="w-full text-left bg-surface">
-                <thead className="bg-primary/10">
-                  <tr>
-                    <th className="p-4 text-sm font-bold text-primary uppercase tracking-wider">Bahan</th>
-                    <th className="p-4 text-sm font-bold text-primary uppercase tracking-wider text-right">Rasio</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-outline-variant/20">
-                  <tr className="hover:bg-primary/5 transition-colors">
-                    <td className="p-4 font-medium text-on-surface">Gula Merah / Molase</td>
-                    <td className="p-4 font-bold text-primary text-right">1 Bagian</td>
-                  </tr>
-                  <tr className="hover:bg-primary/5 transition-colors">
-                    <td className="p-4 font-medium text-on-surface">Sisa Buah & Sayur</td>
-                    <td className="p-4 font-bold text-primary text-right">3 Bagian</td>
-                  </tr>
-                  <tr className="hover:bg-primary/5 transition-colors">
-                    <td className="p-4 font-medium text-on-surface">Air</td>
-                    <td className="p-4 font-bold text-primary text-right">10 Bagian</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <div className="mt-2 text-sm text-on-surface-variant flex flex-col gap-2 bg-surface-container p-4 rounded-xl">
-              <p className="font-semibold text-primary">Proses Pembuatan:</p>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Campurkan air dan gula ke dalam wadah tertutup rapat.</li>
-                <li>Masukkan sisa buah/sayuran.</li>
-                <li>Simpan selama 3 bulan di tempat teduh.</li>
-                <li>Buka tutup setiap hari pada 1 bulan pertama.</li>
+            <div className="bg-red-50 dark:bg-red-900/20 rounded-[2.5rem] p-8 border border-red-200 dark:border-red-800 shadow-sm h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6 bg-red-100 dark:bg-red-800/50 p-4 rounded-xl mx-auto w-full sm:w-fit text-center">
+                <XCircle className="w-6 h-6 text-red-700 dark:text-red-400 flex-shrink-0" />
+                <h3 className="text-lg md:text-xl font-bold text-red-800 dark:text-red-300">Tidak Bisa Dibuat Eco-Enzyme</h3>
+              </div>
+              <ul className="space-y-4 px-2 mt-4">
+                <li className="flex items-start gap-3 text-red-900 dark:text-red-100">
+                  <span className="w-2 h-2 rounded-full bg-red-500 mt-2 flex-shrink-0"></span> 
+                  <span className="text-lg">Daging, Ikan, Udang, Telur, Susu, Keju, dan olahan hewani lainnya.</span>
+                </li>
+                <li className="flex items-start gap-3 text-red-900 dark:text-red-100">
+                  <span className="w-2 h-2 rounded-full bg-red-500 mt-2 flex-shrink-0"></span> 
+                  <span className="text-lg">Kulit buah yang banyak mengandung minyak atau keras (misalnya alpukat dan durian).</span>
+                </li>
+                <li className="flex items-start gap-3 text-red-900 dark:text-red-100">
+                  <span className="w-2 h-2 rounded-full bg-red-500 mt-2 flex-shrink-0"></span> 
+                  <span className="text-lg">Makanan yang sudah dimasak.</span>
+                </li>
               </ul>
             </div>
-          </div>
-
-          {/* Usage & Dosage */}
-          <div className="lg:col-span-2 bg-surface-container-lowest p-8 rounded-3xl shadow-md border border-outline-variant/30 flex flex-col hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-2xl font-bold text-primary mb-8 flex items-center gap-3">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-              </svg>
-              Manfaat & Cara Penggunaan
-            </h3>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
-              <div className="p-6 rounded-2xl bg-surface hover:bg-surface-container-low border border-outline-variant/20 transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-lg text-on-surface mb-2">Pembersih Lantai</h4>
-                <p className="text-on-surface-variant text-sm">Campurkan 10ml Eco-Enzyme dengan 1 Liter air untuk mengepel lantai secara alami dan mengusir serangga.</p>
-              </div>
-              
-              <div className="p-6 rounded-2xl bg-surface hover:bg-surface-container-low border border-outline-variant/20 transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-lg text-on-surface mb-2">Pembersih Udara</h4>
-                <p className="text-on-surface-variant text-sm">Campurkan dengan perbandingan 1:1000. Semprotkan ke ruangan untuk menghilangkan bau dan membunuh bakteri.</p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-surface hover:bg-surface-container-low border border-outline-variant/20 transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-lg text-on-surface mb-2">Pupuk Tanaman</h4>
-                <p className="text-on-surface-variant text-sm">Gunakan rasio 1:1000. Siramkan pada tanaman hias atau kebun dua kali seminggu untuk kesuburan alami.</p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-surface hover:bg-surface-container-low border border-outline-variant/20 transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-lg text-on-surface mb-2">Pembersih Saluran Air</h4>
-                <p className="text-on-surface-variant text-sm">Gunakan cairan murni tanpa dicampur air. Tuang langsung ke saluran air, wastafel, atau kloset untuk mencegah sumbatan.</p>
-              </div>
-            </div>
           </div>
         </div>
+
+        {/* Kalkulator Card */}
+        <div className="bg-surface-container-lowest p-8 md:p-12 rounded-[3rem] shadow-xl border border-outline-variant/30 relative overflow-hidden">
+          <h2 className="text-3xl font-bold text-primary mb-12 text-center">Cara Pembuatan</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            {/* Kalkulator Kolom */}
+            <div className="lg:col-span-6 xl:col-span-7 flex flex-col gap-6">
+              <div className="bg-primary-container/20 p-8 rounded-3xl border border-primary/20 h-full flex flex-col justify-center">
+                <h4 className="font-bold text-2xl mb-6 text-primary text-center">Kalkulator Perbandingan 1 : 3 : 10</h4>
+                <div className="flex flex-col gap-3 mb-8">
+                  <label htmlFor="volume" className="text-sm font-bold text-on-surface-variant uppercase">Kapasitas Wadah Anda (Liter)</label>
+                  <div className="relative">
+                    <input
+                      id="volume"
+                      type="number"
+                      min="0"
+                      step="any"
+                      value={containerVolume}
+                      onChange={(e) => setContainerVolume(e.target.value === "" ? "" : Number(e.target.value))}
+                      className="w-full p-5 text-xl font-bold rounded-2xl border-2 border-outline-variant bg-surface focus:outline-none focus:border-primary text-on-surface shadow-inner"
+                      placeholder="Ketik kapasitas wadah..."
+                    />
+                    <div className="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant/50 font-bold">LITER</div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 text-center shadow-sm">
+                    <span className="text-xs font-bold text-amber-700 dark:text-amber-500 uppercase block mb-1">1 Bagian</span>
+                    <span className="text-sm font-bold text-amber-800 dark:text-amber-400 block mb-2">Gula / Molase</span>
+                    <div className="text-3xl font-black text-amber-900 dark:text-amber-300">{sugarGrams}<span className="text-sm ml-1">g</span></div>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800/50 text-center shadow-sm">
+                    <span className="text-xs font-bold text-green-700 dark:text-green-500 uppercase block mb-1">3 Bagian</span>
+                    <span className="text-sm font-bold text-green-800 dark:text-green-400 block mb-2">Sampah Organik</span>
+                    <div className="text-3xl font-black text-green-900 dark:text-green-300">{organicGrams}<span className="text-sm ml-1">g</span></div>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/50 text-center shadow-sm">
+                    <span className="text-xs font-bold text-blue-700 dark:text-blue-500 uppercase block mb-1">10 Bagian</span>
+                    <span className="text-sm font-bold text-blue-800 dark:text-blue-400 block mb-2">Air Bersih</span>
+                    <div className="text-3xl font-black text-blue-900 dark:text-blue-300">{waterLiters}<span className="text-sm ml-1">L</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Langkah-langkah Kolom */}
+            <div className="lg:col-span-6 xl:col-span-5 flex flex-col justify-center">
+              <h4 className="font-bold text-2xl mb-8 text-on-surface">Langkah-langkah:</h4>
+              <ul className="space-y-5">
+                <li className="flex gap-4 items-start group">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">1</div>
+                  <p className="text-on-surface-variant pt-2 text-lg">Wadah dan bahan disiapkan.</p>
+                </li>
+                <li className="flex gap-4 items-start group">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">2</div>
+                  <p className="text-on-surface-variant pt-2 text-lg">Sampah kulit buah dipotong kecil.</p>
+                </li>
+                <li className="flex gap-4 items-start group">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">3</div>
+                  <p className="text-on-surface-variant pt-2 text-lg">Masukkan air bersih ke dalam wadah sesuai takaran.</p>
+                </li>
+                <li className="flex gap-4 items-start group">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">4</div>
+                  <p className="text-on-surface-variant pt-2 text-lg">Masukkan kulit buah ke dalam wadah sesuai takaran.</p>
+                </li>
+                <li className="flex gap-4 items-start group">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">5</div>
+                  <p className="text-on-surface-variant pt-2 text-lg">Masukkan gula/molase sesuai takaran.</p>
+                </li>
+                <li className="flex gap-4 items-start group">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">6</div>
+                  <p className="text-on-surface-variant pt-2 text-lg">Aduk hingga merata lalu tutup wadah.</p>
+                </li>
+                <li className="flex gap-4 items-start group">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">7</div>
+                  <p className="text-on-surface-variant pt-1 text-lg">Beri label tanggal pembuatan dan diamkan selama <strong>3 bulan atau lebih</strong>.</p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Cara Penggunaan */}
+        <div>
+          <h2 className="text-3xl font-bold text-on-surface text-center mb-10">Cara Penggunaan</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-8 rounded-[2.5rem] border border-blue-200 dark:border-blue-800 shadow-sm flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-800/50 rounded-2xl flex items-center justify-center mb-6">
+                <Droplets className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="text-xl font-bold text-blue-900 dark:text-blue-100 mb-4">1. Untuk Mencuci</h3>
+              <p className="text-blue-800/80 dark:text-blue-200/80 mb-6 flex-grow">
+                Digunakan untuk cuci tangan, cuci lantai, cuci piring, dan pembersih perabot.
+              </p>
+              <div className="bg-blue-100/50 dark:bg-blue-800/30 p-4 rounded-2xl w-full">
+                <p className="font-bold text-blue-900 dark:text-blue-200 mb-2">Perbandingan 1:5 atau 1:10</p>
+                <p className="text-sm text-blue-800/90 dark:text-blue-200/90">
+                  Eco-enzyme 100ml + Sabun 100ml + Air 500–1000ml
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-rose-50 dark:bg-rose-900/20 p-8 rounded-[2.5rem] border border-rose-200 dark:border-rose-800 shadow-sm flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-16 h-16 bg-rose-100 dark:bg-rose-800/50 rounded-2xl flex items-center justify-center mb-6">
+                <HeartPulse className="w-8 h-8 text-rose-600 dark:text-rose-400" />
+              </div>
+              <h3 className="text-xl font-bold text-rose-900 dark:text-rose-100 mb-4">2. Luka Ringan & Toilet</h3>
+              <p className="text-rose-800/80 dark:text-rose-200/80 mb-6 flex-grow">
+                Sebagai obat luka gores dan bisul, pembersih lantai kamar mandi, dan anti toilet tersumbat.
+              </p>
+              <div className="bg-rose-100/50 dark:bg-rose-800/30 p-4 rounded-2xl w-full">
+                <p className="font-bold text-rose-900 dark:text-rose-200 mb-2">Gunakan Secara Murni</p>
+                <p className="text-xs text-rose-800/90 dark:text-rose-200/90 italic">
+                  *Jangan digunakan langsung pada luka terbuka. Untuk kamar mandi diamkan beberapa menit sebelum digosok/dibilas.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-[2.5rem] border border-green-200 dark:border-green-800 shadow-sm flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-800/50 rounded-2xl flex items-center justify-center mb-6">
+                <Sprout className="w-8 h-8 text-green-600 dark:text-green-400" />
+              </div>
+              <h3 className="text-xl font-bold text-green-900 dark:text-green-100 mb-4">3. Tanaman & Pengharum</h3>
+              <p className="text-green-800/80 dark:text-green-200/80 mb-6 flex-grow">
+                Sebagai pupuk organik, pembersih udara, penghilang bau, dan hand sanitizer.
+              </p>
+              <div className="bg-green-100/50 dark:bg-green-800/30 p-4 rounded-2xl w-full flex flex-col gap-3">
+                <div>
+                  <p className="font-bold text-green-900 dark:text-green-200 text-sm">Pupuk / Anti Bau (1:1000)</p>
+                  <p className="text-xs text-green-800/90 dark:text-green-200/90">1 ml Eco-enzyme : 1 Liter Air</p>
+                </div>
+                <div className="w-full h-px bg-green-200/50 dark:bg-green-700/50"></div>
+                <div>
+                  <p className="font-bold text-green-900 dark:text-green-200 text-sm">Hand Sanitizer (1:400)</p>
+                  <p className="text-xs text-green-800/90 dark:text-green-200/90">1 ml Eco-enzyme : 400 ml Air</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -24,7 +24,7 @@ const IconAlertTriangle = ({ className }: { className?: string }) => (
 
 export default function VillageProfile() {
   return (
-    <section className="pt-20 pb-24 px-margin-desktop bg-surface" id="profil-kelurahan">
+    <section className="pt-4 pb-24 px-margin-desktop bg-surface" id="profil-kelurahan">
       <div className="max-w-container-max mx-auto">
         
         {/* Section Header sebagai pemisah block */}
