@@ -42,68 +42,11 @@ export default function Edukasi() {
           </div>
         </div>
 
-        {/* 1. Kenali Dulu Jenis-Jenis Sampah */}
-        <div>
-          <h2 className="text-3xl font-bold text-on-surface mb-8">1. Kenali Dulu Jenis-Jenis Sampah</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-3xl border border-green-200 dark:border-green-800 shadow-sm flex flex-col hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-4 text-green-600"><Leaf className="w-12 h-12" /></div>
-              <h3 className="text-xl font-bold text-green-800 dark:text-green-300 mb-2">Sampah Organik</h3>
-              <p className="text-sm text-green-700 dark:text-green-400 font-semibold mb-4">(mudah terurai)</p>
-              <ul className="text-green-900 dark:text-green-100 mt-auto leading-relaxed list-disc pl-5 space-y-1">
-                <li>Sisa makanan</li>
-                <li>Kulit buah</li>
-                <li>Sisa sayur</li>
-                <li>Daun kering</li>
-                <li>Ampas kopi atau teh</li>
-              </ul>
-            </div>
-            
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-3xl border border-yellow-200 dark:border-yellow-800 shadow-sm flex flex-col hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-4 text-yellow-600"><Recycle className="w-12 h-12" /></div>
-              <h3 className="text-xl font-bold text-yellow-800 dark:text-yellow-300 mb-2">Sampah Anorganik</h3>
-              <p className="text-sm text-yellow-700 dark:text-yellow-400 font-semibold mb-4">(sulit terurai, bisa didaur ulang)</p>
-              <ul className="text-yellow-900 dark:text-yellow-100 mt-auto leading-relaxed list-disc pl-5 space-y-1">
-                <li>Plastik kemasan</li>
-                <li>Botol dan kaleng minuman</li>
-                <li>Kertas dan kardus</li>
-                <li>Kaca dan beling</li>
-                <li>Styrofoam bersih</li>
-              </ul>
-            </div>
 
-            <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-3xl border border-red-200 dark:border-red-800 shadow-sm flex flex-col hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-4 text-red-600"><AlertTriangle className="w-12 h-12" /></div>
-              <h3 className="text-xl font-bold text-red-800 dark:text-red-300 mb-2">Sampah B3</h3>
-              <p className="text-sm text-red-700 dark:text-red-400 font-semibold mb-4">(berbahaya, butuh penanganan khusus)</p>
-              <ul className="text-red-900 dark:text-red-100 mt-auto leading-relaxed list-disc pl-5 space-y-1">
-                <li>Baterai bekas</li>
-                <li>Lampu bekas</li>
-                <li>Obat kedaluwarsa</li>
-                <li>Botol pembersih lantai</li>
-                <li>Kaleng cat atau aerosol</li>
-              </ul>
-            </div>
 
-            <div className="bg-gray-100 dark:bg-gray-800/40 p-6 rounded-3xl border border-gray-300 dark:border-gray-700 shadow-sm flex flex-col hover:-translate-y-2 transition-transform duration-300">
-              <div className="mb-4 text-gray-700"><Trash2 className="w-12 h-12" /></div>
-              <h3 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-2">Sampah Residu</h3>
-              <p className="text-sm text-gray-700 dark:text-gray-400 font-semibold mb-4">(tidak bisa diolah / didaur ulang)</p>
-              <ul className="text-gray-900 dark:text-gray-100 mt-auto leading-relaxed list-disc pl-5 space-y-1 mb-3">
-                <li>Popok bayi dan pembalut</li>
-                <li>Puntung rokok</li>
-                <li>Styrofoam kotor berminyak</li>
-                <li>Kemasan plastik sachet multilayer</li>
-                <li>Tisu bekas pakai</li>
-              </ul>
-              <p className="text-gray-900 dark:text-gray-100 text-sm bg-gray-200/50 p-2 rounded-lg mt-auto"><strong>Inilah satu-satunya yang boleh ke TPA.</strong></p>
-            </div>
-          </div>
-        </div>
-
-        {/* 2. Cara Mudah Memilah di Rumah */}
+        {/* 1. Cara Mudah Memilah di Rumah */}
         <div className="bg-surface-container-lowest p-8 md:p-12 rounded-[3rem] shadow-xl border border-outline-variant/30 relative">
-          <h2 className="text-3xl font-bold text-primary mb-8">2. Cara Mudah Memilah di Rumah</h2>
+          <h2 className="text-3xl font-bold text-primary mb-8">1. Cara Mudah Memilah di Rumah</h2>
           <p className="text-lg text-on-surface-variant mb-6">
             Sediakan minimal 3 wadah/kantong terpisah sesuai anjuran Pemkot Makassar:
           </p>
@@ -195,9 +138,9 @@ export default function Edukasi() {
           </div>
         </div>
 
-        {/* 3. Alternatif Pengolahan Sampah */}
+        {/* 2. Alternatif Pengolahan Sampah */}
         <div>
-          <h2 className="text-3xl font-bold text-on-surface mb-8">3. Alternatif Pengolahan Sampah</h2>
+          <h2 className="text-3xl font-bold text-on-surface mb-8">2. Alternatif Pengolahan Sampah</h2>
           <p className="text-lg text-on-surface-variant mb-10 max-w-4xl">
             Setelah dipilah, sampah tidak harus langsung dibuang. Ada beberapa cara mengolahnya sendiri di rumah atau di lingkungan RT/RW:
           </p>
@@ -270,46 +213,9 @@ export default function Edukasi() {
           </div>
         </div>
 
-        {/* 4. Mulai dari Hal Kecil */}
-        <div className="bg-tertiary-container/30 rounded-[3rem] p-8 md:p-14 border border-tertiary/20 text-center relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-full bg-gradient-to-b from-tertiary/10 to-transparent -z-10 rounded-full blur-3xl"></div>
-          
-          <h2 className="text-3xl md:text-5xl font-extrabold text-tertiary mb-6">4. Mulai dari Hal Kecil</h2>
-          <p className="text-xl text-on-surface-variant max-w-3xl mx-auto mb-12 leading-relaxed">
-            Memilah sampah tidak perlu langsung sempurna. Beberapa langkah kecil yang bisa dimulai hari ini:
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto text-left mb-16">
-            <div className="flex gap-5 items-center bg-surface p-6 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center flex-shrink-0 shadow-inner">
-                <CheckCircle2 className="w-8 h-8" />
-              </div>
-              <span className="font-semibold text-lg text-on-surface">Sediakan 2 kantong sampah di rumah: basah dan kering</span>
-            </div>
-            
-            <div className="flex gap-5 items-center bg-surface p-6 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center flex-shrink-0 shadow-inner">
-                <CheckCircle2 className="w-8 h-8" />
-              </div>
-              <span className="font-semibold text-lg text-on-surface">Kumpulkan sampah B3 di tempat khusus, jangan dicampur</span>
-            </div>
-
-            <div className="flex gap-5 items-center bg-surface p-6 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center flex-shrink-0 shadow-inner">
-                <CheckCircle2 className="w-8 h-8" />
-              </div>
-              <span className="font-semibold text-lg text-on-surface">Coba buat kompos sederhana dari sisa sayur dapur</span>
-            </div>
-
-            <div className="flex gap-5 items-center bg-surface p-6 rounded-[2rem] shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center flex-shrink-0 shadow-inner">
-                <CheckCircle2 className="w-8 h-8" />
-              </div>
-              <span className="font-semibold text-lg text-on-surface">Ajak tetangga atau keluarga ikut memilah bersama</span>
-            </div>
-          </div>
-          
-          <div className="inline-block bg-tertiary text-on-tertiary px-8 py-4 rounded-full shadow-xl font-bold text-xl md:text-2xl transform hover:scale-105 transition-transform">
+        {/* Penutup / Quote */}
+        <div className="flex justify-center pt-8 pb-12">
+          <div className="inline-block bg-tertiary text-on-tertiary px-8 py-4 rounded-full shadow-xl font-bold text-xl md:text-2xl transform hover:scale-105 transition-transform text-center">
             Perubahan besar dimulai dari kebiasaan kecil di rumah!
           </div>
         </div>
