@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Brand & Info */}
         <div className="flex flex-col gap-4 md:col-span-2">
           <div className="flex items-center gap-4">
-            <img src="/images/logo.png" alt="Logo Tamangapa Beraksi" className="h-14 md:h-16 w-auto rounded-lg shadow-sm bg-white p-1" />
+            <img src="/images/logo.png" alt="Logo Tamangapa Beraksi" className="h-24 md:h-28 w-auto drop-shadow-sm" />
             <div className="font-headline-lg text-2xl md:text-3xl font-bold">
               TAMANGAPA BERAKSI
             </div>

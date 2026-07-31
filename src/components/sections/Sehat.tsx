@@ -2,51 +2,50 @@ export default function Sehat() {
   return (
     <div className="pt-4 pb-20 px-margin-desktop bg-surface min-h-screen">
       <div className="max-w-container-max mx-auto">
-        
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="font-headline-xl text-5xl text-primary mb-4 font-bold">Pilar Lingkungan Sehat</h1>
-          <p className="font-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
-            Menjaga kebersihan lingkungan untuk meminimalisir risiko penyakit yang ditimbulkan oleh penumpukan sampah, lindi, dan polusi udara di sekitar kawasan TPA.
-          </p>
-        </div>
 
-        {/* Hero Image */}
-        <div className="w-full h-[400px] rounded-3xl overflow-hidden mb-16 relative group">
-          <img 
-            src="https://images.unsplash.com/photo-1584820927498-cafe6c15af87?q=80&w=2070&auto=format&fit=crop" 
-            alt="Lingkungan Sehat" 
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-            <h2 className="text-3xl font-bold text-white drop-shadow-md">Gerakan Masyarakat Hidup Sehat (GERMAS)</h2>
-          </div>
-        </div>
-
-        {/* Program Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-error/5 p-8 rounded-[32px] border border-error/20 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-error text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">🩺</div>
-            <h3 className="text-xl font-bold text-on-surface mb-3">Pemeriksaan Kesehatan Gratis</h3>
-            <p className="text-on-surface-variant text-sm leading-relaxed">
-              Bekerja sama dengan puskesmas setempat untuk memeriksa kondisi kesehatan warga, terutama Infeksi Saluran Pernapasan Akut (ISPA) akibat asap dan bau TPA.
+        {/* PHBS Section */}
+        <div className="mt-12">
+          <div className="text-center mb-16">
+            <h1 className="font-headline-xl text-5xl text-primary mb-6 font-bold">Perilaku Hidup Bersih dan Sehat (PHBS)</h1>
+            <p className="font-body-lg text-on-surface-variant max-w-4xl mx-auto leading-relaxed">
+              Perilaku Hidup Bersih dan Sehat (PHBS) adalah serangkaian perilaku yang dilakukan atas kesadaran sendiri untuk menjaga kesehatan, mencegah penyakit, serta menciptakan lingkungan yang bersih, sehat, dan nyaman. Penerapan PHBS juga berkontribusi dalam mengurangi dampak perubahan iklim melalui pengelolaan lingkungan yang lebih baik.
             </p>
           </div>
 
-          <div className="bg-primary/5 p-8 rounded-[32px] border border-primary/20 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">💧</div>
-            <h3 className="text-xl font-bold text-on-surface mb-3">Sanitasi & Air Bersih</h3>
-            <p className="text-on-surface-variant text-sm leading-relaxed">
-              Edukasi mengenai pentingnya perlindungan sumur warga dari resapan air lindi sampah, serta penyuluhan tata cara perebusan air yang benar untuk konsumsi.
-            </p>
-          </div>
-          
-          <div className="bg-tertiary/5 p-8 rounded-[32px] border border-tertiary/20 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-tertiary text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">🧹</div>
-            <h3 className="text-xl font-bold text-on-surface mb-3">Kerja Bakti Massal</h3>
-            <p className="text-on-surface-variant text-sm leading-relaxed">
-              Inisiasi kegiatan jumat bersih dan gotong royong membersihkan selokan serta area fasilitas umum untuk memberantas sarang nyamuk demam berdarah.
-            </p>
+          <div className="space-y-12">
+            {/* Kebersihan Lingkungan */}
+            <div className="flex flex-col lg:flex-row gap-0 bg-secondary/5 rounded-[32px] overflow-hidden border border-secondary/20 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full lg:w-1/2 p-10 lg:p-14 flex flex-col justify-center">
+                <h3 className="text-3xl font-bold text-on-surface mb-6">1. Menjaga Kebersihan Lingkungan</h3>
+                <p className="text-on-surface-variant text-lg leading-relaxed">
+                  Menjaga kebersihan lingkungan dapat dilakukan dengan membuang sampah pada tempatnya, memilah sampah organik dan anorganik, mengurangi penggunaan plastik sekali pakai, serta membersihkan saluran air secara rutin. Lingkungan yang bersih membantu mencegah penyebaran penyakit, mengurangi risiko banjir, dan mendukung kelestarian lingkungan sebagai upaya adaptasi terhadap perubahan iklim.
+                </p>
+              </div>
+              <div className="w-full lg:w-1/2 self-stretch lg:self-center">
+                <img
+                  src="/images/kebersihan-lingkungan.jpeg"
+                  alt="Menjaga Kebersihan Lingkungan"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Kebersihan Diri */}
+            <div className="flex flex-col lg:flex-row-reverse gap-0 bg-primary/5 rounded-[32px] overflow-hidden border border-primary/20 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full lg:w-1/2 p-10 lg:p-14 flex flex-col justify-center">
+                <h3 className="text-3xl font-bold text-on-surface mb-6">2. Menjaga Kebersihan Diri</h3>
+                <p className="text-on-surface-variant text-lg leading-relaxed">
+                  Menjaga kebersihan diri meliputi mandi secara teratur, mencuci tangan dengan sabun sebelum makan dan setelah beraktivitas, serta menjaga kesehatan gigi dan mulut. Sikat gigi minimal dua kali sehari (setelah sarapan dan sebelum tidur), gunakan pasta gigi berfluoride, bersihkan lidah, dan lakukan pemeriksaan gigi setiap 6 bulan sekali. Kesehatan gigi dan mulut yang baik dapat mencegah karies, penyakit gusi, bau mulut, serta menjaga kesehatan tubuh secara keseluruhan.
+                </p>
+              </div>
+              <div className="w-full lg:w-1/2 self-stretch lg:self-center">
+                <img
+                  src="/images/kebersihan-diri.jpeg"
+                  alt="Menjaga Kebersihan Diri"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
 

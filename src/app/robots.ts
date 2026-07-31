@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
     },
     // Ganti URL di bawah dengan domain Vercel/Netlify Anda nantinya
-    sitemap: 'https://kkn-116-tamangapa.vercel.app/sitemap.xml',
+    sitemap: 'https://kkn-16-tamangapa.vercel.app/sitemap.xml',
   }
 }

@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KKN 116 Tamangapa - Universitas Hasanuddin",
     description: "Bersama Kelola Sampah, Bersama Jaga Iklim. Program KKN Tematik 116 di Kelurahan Tamangapa.",
+    url: "https://kkn-16-tamangapa.vercel.app",
     siteName: "KKN 116 Tamangapa",
     locale: "id_ID",
     type: "website",
