@@ -1,58 +1,64 @@
+"use client";
+
+import { useState } from "react";
+
 export default function TeamProfile() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const teamMembers = [
     {
       name: "Alif Allamah",
       id: "D011231088",
       faculty: "Teknik Sipil",
-      image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&h=200&fit=crop"
+      image: "/team/D011231088.jpg"
     },
     {
       name: "Naurah Halwah Syakirah",
       id: "H061231019",
       faculty: "Geofisika",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&fit=crop"
+      image: "/team/H061231019.jpg"
     },
     {
       name: "Siti Suhaila Ramadanti S.",
       id: "H031231071",
       faculty: "Kimia",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&h=200&fit=crop"
+      image: "/team/H031231071.jpg"
     },
     {
       name: "Adelia Maya Rezanty",
       id: "I011231330",
       faculty: "Peternakan",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&fit=crop"
+      image: "/team/I011231330.jpg"
     },
     {
       name: "Muh Faiz Hidayat",
       id: "A031231140",
       faculty: "Akuntansi",
-      image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=200&h=200&fit=crop"
+      image: "/team/A031231140.jpg"
     },
     {
       name: "Andi Muthia Amalia M.",
       id: "D101231029",
       faculty: "Perencanaan Wilayah & Kota",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&h=200&fit=crop"
+      image: "/team/D101231029.jpg"
     },
     {
       name: "Radhitya Pramudya Suandi",
       id: "J011231220",
       faculty: "Pend. Dokter Gigi",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&fit=crop"
+      image: "/team/J011231220.jpg"
     },
     {
       name: "Rizky Nur Fahreza",
       id: "C021231070",
       faculty: "Psikologi",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&fit=crop"
+      image: "/team/C021231070.jpg"
     },
     {
       name: "Nur Hilmi Khairunnisa Y.",
       id: "D041231040",
       faculty: "Teknik Elektro",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&fit=crop"
+      image: "/team/D041231040.jpg"
     }
   ];
 
@@ -86,7 +92,10 @@ export default function TeamProfile() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 lg:gap-6">
               {teamMembers.map((member, idx) => (
                 <div key={idx} className="bg-surface-container-lowest p-4 lg:p-5 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-outline-variant/10 group flex flex-col items-center text-center">
-                  <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-surface shadow-inner">
+                  <div 
+                    className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-surface shadow-inner cursor-pointer"
+                    onClick={() => setSelectedImage(member.image)}
+                  >
                     <img
                       src={member.image}
                       alt={member.name}
@@ -105,6 +114,31 @@ export default function TeamProfile() {
 
         </div>
       </div>
+
+      {/* Modal View Image */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-3xl w-full h-auto flex justify-center items-center">
+            <button 
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 bg-white/10 rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+              onClick={() => setSelectedImage(null)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img 
+              src={selectedImage} 
+              alt="Team Member Full" 
+              className="max-w-full max-h-[85vh] rounded-2xl shadow-2xl object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
