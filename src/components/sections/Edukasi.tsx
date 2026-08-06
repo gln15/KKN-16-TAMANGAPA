@@ -48,7 +48,7 @@ export default function Edukasi() {
         <div className="bg-surface-container-lowest p-8 md:p-12 rounded-[3rem] shadow-xl border border-outline-variant/30 relative">
           <h2 className="text-3xl font-bold text-primary mb-8">1. Cara Mudah Memilah di Rumah</h2>
           <p className="text-lg text-on-surface-variant mb-6">
-            Sediakan minimal 3 wadah/kantong terpisah sesuai anjuran Pemkot Makassar:
+            Sediakan minimal 3 wadah/kantong terpisah sesuai anjuran Pemerintah Kota Makassar:
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -126,7 +126,7 @@ export default function Edukasi() {
                 <ul className="space-y-3 text-white/95 list-disc pl-5 text-lg">
                   <li>Kebijakan ini adalah bagian dari penghentian sistem <i>open dumping</i> menuju sistem <i>controlled landfill</i> yang lebih ramah lingkungan.</li>
                   <li>Sampah organik menyumbang porsi terbesar di TPA selama ini, dan jadi penyebab utama gas metana serta air lindi yang mencemari lingkungan.</li>
-                  <li>Warga yang mengolah sampah organik jadi kompos atau budidaya maggot bisa menjualnya ke Bank Sampah Pusat milik Pemkot Makassar.</li>
+                  <li>Warga yang mengolah sampah organik jadi kompos atau budidaya maggot BSF bisa menjualnya ke Bank Sampah Pusat milik Pemerintah Kota Makassar.</li>
                   <li>Jika belum punya fasilitas pengolahan sendiri, sampah yang sudah dipilah bisa diserahkan ke kelurahan/kecamatan untuk diproses lebih lanjut.</li>
                 </ul>
               </div>
@@ -188,15 +188,15 @@ export default function Edukasi() {
 
             <div className="bg-surface hover:bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 group">
               <div className="mb-6 group-hover:scale-110 transition-transform origin-left text-lime-600"><Bug className="w-12 h-12" /></div>
-              <h3 className="text-xl font-bold text-on-surface mb-4">Budidaya Maggot (BSF)</h3>
+              <h3 className="text-xl font-bold text-on-surface mb-4">Budidaya Maggot BSF</h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Sisa organik jadi pakan maggot. Maggot dipanen sebagai pakan ikan bernilai jual tinggi, sisa medianya (kasgot) dipakai sebagai pupuk.
+                Sisa organik jadi pakan maggot BSF. Maggot BSF dipanen sebagai pakan ikan bernilai jual tinggi, sisa medianya (kasgot) dipakai sebagai pupuk.
               </p>
             </div>
 
             <div className="bg-surface hover:bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 group">
               <div className="mb-6 group-hover:scale-110 transition-transform origin-left text-teal-600"><FlaskConical className="w-12 h-12" /></div>
-              <h3 className="text-xl font-bold text-on-surface mb-4">Eco Enzyme dari Buah</h3>
+              <h3 className="text-xl font-bold text-on-surface mb-4">Eco-enzyme dari Buah</h3>
               <p className="text-on-surface-variant leading-relaxed">
                 Kulit buah difermentasi bersama gula dan air selama 3 bulan. Hasilnya berupa cairan serbaguna untuk pembersih lantai dan penjernih air.
               </p>

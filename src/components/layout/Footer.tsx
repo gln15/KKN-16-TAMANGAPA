@@ -22,7 +22,9 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-lg border-b border-white/20 pb-2 inline-block w-fit">Pilar Program</h4>
           <div className="flex flex-col gap-3">
-            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/">Beranda</Link>
+            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/#profil-wilayah">Profil Wilayah</Link>
+            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/#tim-kami">Tim Kami</Link>
+            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/#berita">Berita</Link>
             <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/kenali">Kenali (Pemetaan)</Link>
             <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/edukasi">Edukasi Lingkungan</Link>
             <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/sehat">Lingkungan Sehat</Link>
@@ -35,8 +37,8 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-lg border-b border-white/20 pb-2 inline-block w-fit">Olah Sampah</h4>
           <div className="flex flex-col gap-3">
-            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/olah/eco-enzym">Eco Enzym</Link>
-            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/olah/eco-brick">Eco Brick</Link>
+            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/olah/eco-enzym">Eco-enzyme</Link>
+            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/olah/eco-brick">Ecobrick</Link>
             <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/olah/maggot">Maggot BSF</Link>
           </div>
         </div>

@@ -36,7 +36,11 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-4 lg:gap-6 items-center">
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/">Home</Link>
+
+          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/#profil-wilayah">Profil Wilayah</Link>
+          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/#tim-kami">Tim Kami</Link>
+          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/#berita">Berita</Link>
+
           <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/kenali">Kenali</Link>
           <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/edukasi">Edukasi</Link>
 
@@ -53,8 +57,8 @@ export default function Navbar() {
             {isOlahOpen && (
               <div className="absolute top-full left-0 pt-2 w-48 z-50">
                 <div className="bg-surface-container-lowest border border-outline-variant/20 rounded-xl shadow-lg py-2 flex flex-col">
-                  <Link className="px-4 py-2 text-sm hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="/olah/eco-enzym">Eco Enzym</Link>
-                  <Link className="px-4 py-2 text-sm hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="/olah/eco-brick">Eco Brick</Link>
+                  <Link className="px-4 py-2 text-sm hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="/olah/eco-enzym">Eco-enzyme</Link>
+                  <Link className="px-4 py-2 text-sm hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="/olah/eco-brick">Ecobrick</Link>
                   <Link className="px-4 py-2 text-sm hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="/olah/maggot">Maggot BSF</Link>
                 </div>
               </div>
@@ -70,7 +74,11 @@ export default function Navbar() {
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-surface border-b border-outline-variant/20 shadow-xl flex flex-col py-6 px-8 gap-5 max-h-[calc(100vh-80px)] overflow-y-auto">
-          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/">Home</Link>
+          
+          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/#profil-wilayah">Profil Wilayah</Link>
+          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/#tim-kami">Tim Kami</Link>
+          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/#berita">Berita</Link>
+
           <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/kenali">Kenali (Pemetaan)</Link>
           <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/edukasi">Edukasi Lingkungan</Link>
           
@@ -84,8 +92,8 @@ export default function Navbar() {
             </button>
             {isMobileOlahOpen && (
               <div className="flex flex-col pl-4 gap-4 mt-3 border-l-2 border-outline-variant/30">
-                <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="/olah/eco-enzym">1. Eco Enzym</Link>
-                <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="/olah/eco-brick">2. Eco Brick</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="/olah/eco-enzym">1. Eco-enzyme</Link>
+                <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="/olah/eco-brick">2. Ecobrick</Link>
                 <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="/olah/maggot">3. Maggot BSF</Link>
               </div>
             )}

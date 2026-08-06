@@ -35,7 +35,7 @@ export default function Maggot() {
           <div className="order-1 lg:order-2 flex flex-col items-center">
             <img 
               className="w-full max-w-md rounded-[3rem] shadow-2xl object-contain border border-outline-variant/30" 
-              alt="Infografis Panduan Budidaya Maggot" 
+              alt="Infografis Panduan Budidaya Maggot BSF" 
               src="/images/panduan-maggot.jpg.jpeg" 
             />
           </div>
@@ -80,7 +80,7 @@ export default function Maggot() {
                 4
               </div>
               <h4 className="font-bold text-xl text-on-surface mb-3">Panen</h4>
-              <p className="text-on-surface-variant text-sm">Dipanen menjadi Maggot Dewasa (pakan ternak berprotein) dan Kasgot (pupuk organik tanaman).</p>
+              <p className="text-on-surface-variant text-sm">Dipanen menjadi Maggot BSF Dewasa (pakan ternak berprotein) dan Kasgot (pupuk organik tanaman).</p>
             </div>
           </div>
         </div>

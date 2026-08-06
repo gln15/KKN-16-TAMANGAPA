@@ -24,9 +24,9 @@ const IconAlertTriangle = ({ className }: { className?: string }) => (
 
 export default function VillageProfile() {
   return (
-    <section className="pt-4 pb-24 px-margin-desktop bg-surface" id="profil-kelurahan">
+    <section className="pt-4 pb-24 px-margin-desktop bg-surface scroll-mt-20" id="profil-wilayah">
       <div className="max-w-container-max mx-auto">
-        
+
         {/* Section Header sebagai pemisah block */}
         <div className="text-center mb-12">
           <h2 className="font-headline-xl text-4xl lg:text-5xl text-primary font-bold mb-4">Profil Wilayah KKN</h2>
@@ -36,12 +36,12 @@ export default function VillageProfile() {
         </div>
 
         <div className="flex flex-col gap-10">
-          
+
           {/* 1. SEJARAH & GAMBARAN UMUM (Full Width) */}
           <div className="bg-surface-container-lowest p-8 lg:p-12 rounded-[32px] border border-outline-variant/20 shadow-sm">
             <h3 className="text-3xl font-bold text-on-surface mb-2">Kelurahan Tamangapa</h3>
             <p className="text-primary font-semibold mb-8">Kecamatan Manggala, Kota Makassar</p>
-            
+
             <h4 className="text-lg font-bold text-on-surface mb-3">Sejarah Singkat & Asal Usul</h4>
             <p className="text-on-surface-variant leading-relaxed mb-8">
               Nama "Tamangapa" berasal dari kata dalam bahasa Makassar, <i>"Tena na ngapa-ngapa"</i> yang berarti "tidak apa-apa" atau "aman". Secara historis, wilayah ini dianggap sebagai tempat perlindungan yang aman. Dahulu, jika pasukan Kerajaan Gowa pergi berperang dan mereka mundur sampai ke wilayah ini, mereka akan merasa aman dari kejaran musuh. Kelurahan ini resmi dibentuk pada tahun 1971 dari penggabungan dua kampung, yaitu Kampung Bangkala dan Kampung Kassi, saat dimasukkan ke dalam wilayah administratif Kotamadya Ujung Pandang.
@@ -67,7 +67,7 @@ export default function VillageProfile() {
               <h4 className="font-bold text-on-surface mb-1">Luas Wilayah</h4>
               <p className="text-primary font-extrabold text-2xl">7,62 <span className="text-sm font-normal">km²</span></p>
             </div>
-            
+
             <div className="bg-primary/5 border border-primary/10 p-6 rounded-[24px] flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
               <IconUsers className="text-4xl text-primary mb-3" />
               <h4 className="font-bold text-on-surface mb-1">Jumlah Penduduk</h4>
@@ -77,7 +77,7 @@ export default function VillageProfile() {
             <div className="bg-primary/5 border border-primary/10 p-6 rounded-[24px] flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
               <IconHome className="text-4xl text-primary mb-3" />
               <h4 className="font-bold text-on-surface mb-1">Total RT/RW</h4>
-              <p className="text-primary font-extrabold text-2xl">41 <span className="text-sm font-normal">RT</span> / 7 <span className="text-sm font-normal">RW</span></p>
+              <p className="text-primary font-extrabold text-2xl">43 <span className="text-sm font-normal">RT</span> / 7 <span className="text-sm font-normal">RW</span></p>
             </div>
 
             <div className="bg-primary/5 border border-primary/10 p-6 rounded-[24px] flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
@@ -140,7 +140,7 @@ export default function VillageProfile() {
               Kelurahan Tamangapa menghadapi tantangan lingkungan yang sangat masif karena menjadi lokasi <b>TPA Antang</b>, tempat bermuaranya ribuan ton sampah dari seluruh penjuru Kota Makassar setiap harinya. Volume sampah yang terus menggunung tanpa pemilahan optimal menimbulkan masalah polusi udara, pencemaran tanah, dan risiko kesehatan bagi warga di radius <i>buffer zone</i>.
             </p>
             <p className="text-on-surface-variant leading-relaxed font-semibold">
-              Kondisi kritis inilah yang melatarbelakangi lahirnya program kerja KKN "BERAKSI" (Bersama Kelola Sampah, Bersama Jaga Iklim). Kami berfokus untuk memberdayakan masyarakat agar mampu memilah limbah organik menjadi Eco Enzym & Maggot, serta mendaur ulang limbah plastik menjadi Eco Brick langsung dari rumah mereka.
+              Kondisi kritis inilah yang melatarbelakangi lahirnya program kerja KKN "BERAKSI" (Bersama Kelola Sampah, Bersama Jaga Iklim). Kami berfokus untuk memberdayakan masyarakat agar mampu memilah limbah organik menjadi Eco-enzyme & Maggot BSF, serta mendaur ulang limbah plastik menjadi Ecobrick langsung dari rumah mereka.
             </p>
           </div>
 

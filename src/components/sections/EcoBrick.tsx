@@ -14,10 +14,10 @@ export default function EcoBrick() {
             <Box className="w-10 h-10" />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary leading-tight">
-            Panduan Membuat Eco Brick
+            Panduan Membuat Ecobrick
           </h1>
           <p className="text-xl md:text-2xl text-on-surface-variant font-medium leading-relaxed">
-            Mengubah sampah plastik menjadi balok bangunan ramah lingkungan
+            Mengubah sampah plastik menjadi bata ramah lingkungan
           </p>
         </div>
 

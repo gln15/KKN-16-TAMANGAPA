@@ -30,8 +30,8 @@ Semua konten kini dirangkum secara elegan ke dalam **satu halaman *scroll* panja
 
 ### B. 3 Pilar Pengelolaan Sampah (Waste Mgmt)
 Menggunakan pendekatan *Bento Grid Style* dengan efek *Glass Card*.
-1.  **Ecoenzym:** Penjelasan formula (1:3:10) dan manfaat cairan serbaguna.
-2.  **Budidaya Maggot:** Solusi protein alternatif (pakan ternak) dan pupuk kasgot.
+1.  **Eco-enzyme:** Penjelasan formula (1:3:10) dan manfaat cairan serbaguna.
+2.  **Budidaya Maggot BSF:** Solusi protein alternatif (pakan ternak) dan pupuk kasgot.
 3.  **Ecobricks:** 3 tahapan membuat modul bangunan dari sampah plastik residu.
 
 ### C. Integrasi & Sosialisasi (Economics & Health)

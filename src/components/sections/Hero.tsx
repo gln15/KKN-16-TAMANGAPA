@@ -17,7 +17,7 @@ const slides = [
   },
   {
     title: "Inovasi Daur Ulang Mandiri",
-    desc: "Mengubah limbah organik menjadi Eco Enzym dan Maggot, serta memanfaatkan plastik menjadi barang bernilai lewat Eco Brick.",
+    desc: "Mengubah limbah organik menjadi Eco-enzyme dan Maggot BSF, serta memanfaatkan plastik menjadi barang bernilai lewat Ecobrick.",
     image: "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?q=80&w=2070&auto=format&fit=crop"
   }
 ];

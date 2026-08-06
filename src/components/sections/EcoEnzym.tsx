@@ -18,7 +18,7 @@ export default function EcoEnzym() {
         {/* Header Section */}
         <div className="text-center space-y-6 max-w-4xl mx-auto pt-8">
           <h1 className="text-4xl md:text-5xl font-extrabold text-on-surface">
-            Apa itu <span className="text-primary">Eco-Enzyme</span>?
+            Apa itu <span className="text-primary">Eco-enzyme</span>?
           </h1>
           <p className="text-lg text-on-surface-variant leading-relaxed">
             Eco-enzyme merupakan cairan serbaguna hasil fermentasi kulit buah/sayuran, gula, dan air selama 3 bulan atau lebih, yang dapat digunakan untuk berbagai keperluan rumah tangga dan lingkungan.
@@ -33,7 +33,7 @@ export default function EcoEnzym() {
             <div className="bg-green-50 dark:bg-green-900/20 rounded-[2.5rem] p-8 border border-green-200 dark:border-green-800 shadow-sm h-full flex flex-col">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6 bg-green-100 dark:bg-green-800/50 p-4 rounded-xl mx-auto w-full sm:w-fit text-center">
                 <CheckCircle2 className="w-6 h-6 text-green-700 dark:text-green-400 flex-shrink-0" />
-                <h3 className="text-lg md:text-xl font-bold text-green-800 dark:text-green-300">Bisa Dibuat Eco-Enzyme</h3>
+                <h3 className="text-lg md:text-xl font-bold text-green-800 dark:text-green-300">Bisa Dibuat Eco-enzyme</h3>
               </div>
               <p className="text-green-900 dark:text-green-100 mb-6 font-semibold text-center">Limbah buah dan sayuran yang masih segar, seperti:</p>
               <div className="flex flex-wrap gap-2 justify-center">
@@ -46,7 +46,7 @@ export default function EcoEnzym() {
             <div className="bg-red-50 dark:bg-red-900/20 rounded-[2.5rem] p-8 border border-red-200 dark:border-red-800 shadow-sm h-full flex flex-col">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-6 bg-red-100 dark:bg-red-800/50 p-4 rounded-xl mx-auto w-full sm:w-fit text-center">
                 <XCircle className="w-6 h-6 text-red-700 dark:text-red-400 flex-shrink-0" />
-                <h3 className="text-lg md:text-xl font-bold text-red-800 dark:text-red-300">Tidak Bisa Dibuat Eco-Enzyme</h3>
+                <h3 className="text-lg md:text-xl font-bold text-red-800 dark:text-red-300">Tidak Bisa Dibuat Eco-enzyme</h3>
               </div>
               <ul className="space-y-4 px-2 mt-4">
                 <li className="flex items-start gap-3 text-red-900 dark:text-red-100">
@@ -56,6 +56,10 @@ export default function EcoEnzym() {
                 <li className="flex items-start gap-3 text-red-900 dark:text-red-100">
                   <span className="w-2 h-2 rounded-full bg-red-500 mt-2 flex-shrink-0"></span> 
                   <span className="text-lg">Kulit buah yang banyak mengandung minyak atau keras (misalnya alpukat dan durian).</span>
+                </li>
+                <li className="flex items-start gap-3 text-red-900 dark:text-red-100">
+                  <span className="w-2 h-2 rounded-full bg-red-500 mt-2 flex-shrink-0"></span> 
+                  <span className="text-lg">Kulit buah bergetah ekstrem (contohnya nangka).</span>
                 </li>
                 <li className="flex items-start gap-3 text-red-900 dark:text-red-100">
                   <span className="w-2 h-2 rounded-full bg-red-500 mt-2 flex-shrink-0"></span> 

@@ -63,7 +63,7 @@ export default function TeamProfile() {
   ];
 
   return (
-    <section className="pt-4 pb-24 px-margin-desktop bg-surface-container" id="tim-kkn">
+    <section className="pt-4 pb-24 px-margin-desktop bg-surface-container scroll-mt-20" id="tim-kami">
       <div className="max-w-container-max mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 

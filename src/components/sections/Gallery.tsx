@@ -3,20 +3,20 @@ import { useState } from 'react';
 
 const galleryData = [
   { id: 1, category: 'Bank Sampah', title: 'Penyetoran Rutin Unit 04', date: '15 Okt 2023', desc: 'Kegiatan rutin warga RW 04 menyetorkan sampah plastik dan kertas yang telah dipilah.', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAeYh8VGZsIPNqH6HXYQQX9FCPMU2xzjcQLCXcwbM5iY6DQypyVF5LRrR93ro9Wetaev8bit7JxBiEmbXR6U3PVtzGD3oh8fbUMBLJlb1cR__hTnNLBScYS-R7N_-ri8cVrkI9cqb3bBwbc44QQGGxVE1Out4dLEbCY-Zj_4I4mgUSP6xpA_nyyNKATA0DeTSdSLDCY7hna2gTU1pOpnG3cHIOQhC-mmHeu_rdch7LBUlFmankkQjtyIXy1j9UbT5IhwKXuMVObqUEI' },
-  { id: 2, category: 'Edukasi', title: 'Workshop Eco-Bricks Sekolah', date: '12 Okt 2023', desc: 'Siswa SDN Tamangapa belajar mengolah sampah plastik menjadi material konstruksi.', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBmSzxEwf-CNUc2eY-meEvzrA5SKM_Qy1UYOHzkBgOue89q4-X1juhg71jEU8_9RRWk2vE9tr4ajknA9TbJpvNCchQ8Uz-_IzP9UiEVumV9pZJQLQ-jW9_plviZcpooXgweGc-uE_9eksooWQO9BbPH-wdp37flV0CQhws10pJd8nmCz5NYoHZ5-COI5fwfyuQJne9U--r9I8i-7G8xGP1jBPAPic1m_9KptmRsoIw9LmDYfQ1iXjoeXW53Kxl5Bb_nsu0PRJnT7Ryh' },
+  { id: 2, category: 'Edukasi', title: 'Workshop Ecobrick Sekolah', date: '12 Okt 2023', desc: 'Siswa SDN Tamangapa belajar mengolah sampah plastik menjadi material konstruksi.', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBmSzxEwf-CNUc2eY-meEvzrA5SKM_Qy1UYOHzkBgOue89q4-X1juhg71jEU8_9RRWk2vE9tr4ajknA9TbJpvNCchQ8Uz-_IzP9UiEVumV9pZJQLQ-jW9_plviZcpooXgweGc-uE_9eksooWQO9BbPH-wdp37flV0CQhws10pJd8nmCz5NYoHZ5-COI5fwfyuQJne9U--r9I8i-7G8xGP1jBPAPic1m_9KptmRsoIw9LmDYfQ1iXjoeXW53Kxl5Bb_nsu0PRJnT7Ryh' },
   { id: 3, category: 'Kebersihan', title: 'Aksi Bersih Kanal Perumnas', date: '08 Okt 2023', desc: 'Gotong royong warga membersihkan saluran drainase untuk mencegah penyumbatan.', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl5opvqej5cfT6ElzwkmyQWd_tzLy7Vc5u6oYV0TBUPtL9zZ6HXHlh7QrngIsWXMVSRKNeb3zVgVmdGEpQAOX3nlkgXXCKGB6FaBT-UNVBalADWhWW9rM7m9v6DWua6zv7UT8vlWpqFLD4iyDOUuP3CSuzvJqZYID6LMU8WC5BmUgh3SzEsLbYVtbitP7ZlWAQ0C6qwMLrG06OC_PLdDP5wmkTpitAnYfVYCKt0xYkVcKlvfylozh04SAXEoRkf3KNy9g2vv83OIxO' },
-  { id: 4, category: 'Sosialisasi Eco-Enzym', title: 'Pelatihan Ibu PKK', date: '05 Okt 2023', desc: 'Pembuatan cairan serbaguna dari sisa kulit buah oleh kelompok PKK RW 02.', img: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop' },
+  { id: 4, category: 'Sosialisasi Eco-enzyme', title: 'Pelatihan Ibu PKK', date: '05 Okt 2023', desc: 'Pembuatan cairan serbaguna dari sisa kulit buah oleh kelompok PKK RW 02.', img: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop' },
   { id: 5, category: 'Edukasi', title: 'Sosialisasi Bahaya Lindi TPA', date: '01 Okt 2023', desc: 'Penyuluhan mengenai bahaya pencemaran air tanah akibat resapan lindi TPA Antang.', img: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070&auto=format&fit=crop' },
   { id: 6, category: 'Bank Sampah', title: 'Peresmian Gudang Baru', date: '28 Sep 2023', desc: 'Gudang transit bank sampah kelurahan resmi dibuka untuk menampung lebih banyak stok.', img: 'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?q=80&w=2070&auto=format&fit=crop' },
   { id: 7, category: 'Kebersihan', title: 'Pembersihan Fasum Lapangan', date: '25 Sep 2023', desc: 'Kegiatan jumat bersih yang difokuskan pada area lapangan olahraga warga.', img: 'https://images.unsplash.com/photo-1528323273322-d81458248d40?q=80&w=2129&auto=format&fit=crop' },
-  { id: 8, category: 'Edukasi', title: 'Seminar Pengolahan Maggot BSF', date: '20 Sep 2023', desc: 'Mahasiswa KKN memberikan pengarahan tata cara budidaya Maggot skala rumah tangga.', img: 'https://images.unsplash.com/photo-1574682772590-0906236bfa5a?q=80&w=2070&auto=format&fit=crop' },
+  { id: 8, category: 'Edukasi', title: 'Seminar Pengolahan Maggot BSF', date: '20 Sep 2023', desc: 'Mahasiswa KKN memberikan pengarahan tata cara budidaya Maggot BSF skala rumah tangga.', img: 'https://images.unsplash.com/photo-1574682772590-0906236bfa5a?q=80&w=2070&auto=format&fit=crop' },
   { id: 9, category: 'Kebersihan', title: 'Pemangkasan Pohon Tumbang', date: '18 Sep 2023', desc: 'Kerjasama dengan dinas lingkungan hidup untuk memangkas pohon rawan tumbang.', img: 'https://images.unsplash.com/photo-1622322301322-869389e3557e?q=80&w=1931&auto=format&fit=crop' },
   { id: 10, category: 'Bank Sampah', title: 'Penimbangan Serentak', date: '15 Sep 2023', desc: 'Hari penimbangan serentak sampah kardus dari seluruh RT di Kelurahan Tamangapa.', img: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1987&auto=format&fit=crop' },
-  { id: 11, category: 'Sosialisasi Eco-Enzym', title: 'Panen Eco Enzym Perdana', date: '10 Sep 2023', desc: 'Hasil fermentasi Eco Enzym selama 3 bulan akhirnya dipanen dan dibagikan ke warga.', img: 'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?q=80&w=2070&auto=format&fit=crop' },
+  { id: 11, category: 'Sosialisasi Eco-enzyme', title: 'Panen Eco-enzyme Perdana', date: '10 Sep 2023', desc: 'Hasil fermentasi Eco-enzyme selama 3 bulan akhirnya dipanen dan dibagikan ke warga.', img: 'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?q=80&w=2070&auto=format&fit=crop' },
   { id: 12, category: 'Edukasi', title: 'Lomba Menggambar Daur Ulang', date: '05 Sep 2023', desc: 'Anak-anak berlomba menggambar dengan tema lingkungan sehat bebas polusi.', img: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop' }
 ];
 
-const categories = ['Semua Kegiatan', 'Edukasi', 'Kebersihan', 'Bank Sampah', 'Sosialisasi Eco-Enzym'];
+const categories = ['Semua Kegiatan', 'Edukasi', 'Kebersihan', 'Bank Sampah', 'Sosialisasi Eco-enzyme'];
 const ITEMS_PER_PAGE = 9;
 
 export default function Gallery() {
@@ -47,7 +47,7 @@ export default function Gallery() {
       case 'Bank Sampah': return 'bg-waste-plastic/10 text-waste-plastic';
       case 'Edukasi': return 'bg-primary-fixed text-on-primary-fixed-variant';
       case 'Kebersihan': return 'bg-waste-organic/20 text-on-surface';
-      case 'Sosialisasi Eco-Enzym': return 'bg-tertiary/20 text-tertiary';
+      case 'Sosialisasi Eco-enzyme': return 'bg-tertiary/20 text-tertiary';
       default: return 'bg-surface-container text-on-surface';
     }
   };

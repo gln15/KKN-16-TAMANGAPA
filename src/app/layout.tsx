@@ -5,14 +5,14 @@ import Footer from '../components/layout/Footer';
 
 export const metadata: Metadata = {
   title: "KKN 116 Tamangapa - Universitas Hasanuddin",
-  description: "Program KKN Tematik 116 Universitas Hasanuddin di Kelurahan Tamangapa. Panduan pengelolaan sampah berkelanjutan, Eco-Enzyme, Eco Brick, dan Maggot BSF.",
+  description: "Program KKN Tematik 116 Universitas Hasanuddin di Kelurahan Tamangapa. Panduan pengelolaan sampah berkelanjutan, Eco-enzyme, Ecobrick, dan Maggot BSF.",
   keywords: [
     "KKN 116", 
     "KKN 116 Tamangapa", 
     "KKN Universitas Hasanuddin", 
     "KKN Tematik 116", 
     "Pengelolaan Sampah Tamangapa", 
-    "Eco Enzym", 
+    "Eco-enzyme", 
     "Maggot BSF", 
     "Desa Bersih"
   ],
