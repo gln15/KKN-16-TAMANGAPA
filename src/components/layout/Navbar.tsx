@@ -36,11 +36,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-4 lg:gap-6 items-center">
-
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/#profil-wilayah">Profil Wilayah</Link>
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/#tim-kami">Tim Kami</Link>
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/#berita">Berita</Link>
-
+          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/">Home</Link>
           <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/kenali">Kenali</Link>
           <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/edukasi">Edukasi</Link>
 
@@ -74,11 +70,7 @@ export default function Navbar() {
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-surface border-b border-outline-variant/20 shadow-xl flex flex-col py-6 px-8 gap-5 max-h-[calc(100vh-80px)] overflow-y-auto">
-          
-          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/#profil-wilayah">Profil Wilayah</Link>
-          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/#tim-kami">Tim Kami</Link>
-          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/#berita">Berita</Link>
-
+          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/">Home</Link>
           <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/kenali">Kenali (Pemetaan)</Link>
           <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/edukasi">Edukasi Lingkungan</Link>
           

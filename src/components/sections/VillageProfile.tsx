@@ -77,7 +77,7 @@ export default function VillageProfile() {
             <div className="bg-primary/5 border border-primary/10 p-6 rounded-[24px] flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
               <IconHome className="text-4xl text-primary mb-3" />
               <h4 className="font-bold text-on-surface mb-1">Total RT/RW</h4>
-              <p className="text-primary font-extrabold text-2xl">43 <span className="text-sm font-normal">RT</span> / 7 <span className="text-sm font-normal">RW</span></p>
+              <p className="text-primary font-extrabold text-2xl">43 <span className="text-sm font-normal"k>RT</span> / 7 <span className="text-sm font-normal">RW</span></p>
             </div>
 
             <div className="bg-primary/5 border border-primary/10 p-6 rounded-[24px] flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
@@ -116,8 +116,8 @@ export default function VillageProfile() {
             </div>
 
             <div className="bg-surface-container-lowest p-8 rounded-[32px] border border-outline-variant/20 shadow-sm flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
-              <div className="w-24 h-24 bg-primary/10 text-primary flex items-center justify-center rounded-full flex-shrink-0 border-2 border-primary/20">
-                <IconUsers className="text-4xl" />
+              <div className="w-24 h-24 flex items-center justify-center rounded-full flex-shrink-0 border-4 border-primary/20 overflow-hidden shadow-sm">
+                <img src="/images/lurah.jpeg" alt="Bapak Muhammad Sadli - Lurah Tamangapa" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 className="text-xl font-bold text-on-surface mb-1">Muhammad Sadli, SE., M.Si.</h4>

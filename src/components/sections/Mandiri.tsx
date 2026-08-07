@@ -17,7 +17,12 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
-  TrendingUp
+  TrendingUp,
+  X,
+  BookOpen,
+  Settings,
+  Factory,
+  CircleDollarSign
 } from 'lucide-react';
 
 const bmcElements = [
@@ -162,6 +167,51 @@ export default function Mandiri() {
   const touchEndX = useRef(0);
   const total = bmcElements.length;
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    keyPartners: '',
+    keyActivities: '',
+    valuePropositions: '',
+    customerRelationship: '',
+    customerSegment: '',
+    keyResources: '',
+    profit: '',
+    channels: '',
+    costStructure: '',
+    revenueStreams: ''
+  });
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const target = e.target as HTMLTextAreaElement;
+      const start = target.selectionStart;
+      const end = target.selectionEnd;
+      const value = target.value;
+      
+      const bullet = '\n• ';
+      const newValue = value.substring(0, start) + bullet + value.substring(end);
+      
+      setFormData({ ...formData, [target.name]: newValue });
+      
+      setTimeout(() => {
+        target.selectionStart = target.selectionEnd = start + bullet.length;
+      }, 0);
+    }
+  };
+
+  const handleGenerate = () => {
+    // Membuka dialog print bawaan browser yang memungkinkan "Save as PDF"
+    window.print();
+    setTimeout(() => {
+      setIsModalOpen(false);
+    }, 500);
+  };
+
   const goTo = useCallback((index: number, dir: 'left' | 'right') => {
     setDirection(dir);
     setActive(index);
@@ -209,7 +259,9 @@ export default function Mandiri() {
   };
 
   return (
-    <div className="pt-4 pb-24 px-6 md:px-12 bg-surface min-h-screen relative z-0">
+    <>
+      {/* Main UI (Hidden when printing) */}
+      <div className="print:hidden pt-4 pb-24 px-6 md:px-12 bg-surface min-h-screen relative z-0">
       {/* Decorative Background Blurs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10">
         <div className="absolute top-[5%] left-[-5%] w-[35%] h-[35%] bg-primary/8 rounded-full blur-[140px]"></div>
@@ -437,7 +489,271 @@ export default function Mandiri() {
           </p>
         </div>
 
+        {/* ═══ BMC GENERATOR CTA ═══ */}
+        <div className="bg-surface-container p-8 md:p-12 rounded-[2rem] border border-outline-variant/30 text-center max-w-4xl mx-auto mt-12 shadow-sm">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-on-surface mb-4">
+            Mulai Langkah Bisnis Anda di Sini!
+          </h3>
+          <p className="text-on-surface-variant leading-relaxed max-w-2xl mx-auto text-lg mb-8">
+            Solusi pengelolaan limbah yang berkelanjutan dimulai dari perencanaan yang matang. Gunakan template BMC di bawah ini untuk merancang strategi usaha Anda.
+          </p>
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-primary text-on-primary font-bold px-8 py-4 rounded-full text-lg hover:bg-primary/90 transition-colors shadow-md hover:shadow-lg active:scale-95"
+          >
+            Buat BMC Anda
+          </button>
+        </div>
+
+        {/* ═══ BMC RESULT INLINE (REMOVED) ═══ */}
       </div>
-    </div>
+
+      {/* ═══ MODAL FORM ═══ */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 print:hidden">
+          <style>{`
+            .custom-scrollbar::-webkit-scrollbar { width: 12px; height: 12px; }
+            .custom-scrollbar::-webkit-scrollbar-track { background: #0b2920; }
+            .custom-scrollbar::-webkit-scrollbar-thumb { background: #1a4d3d; border-radius: 10px; border: 3px solid #0b2920; }
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #22614d; }
+
+            .textarea-scrollbar::-webkit-scrollbar { width: 8px; }
+            .textarea-scrollbar::-webkit-scrollbar-track { background: transparent; }
+            .textarea-scrollbar::-webkit-scrollbar-thumb { background: #dce4c7; border-radius: 10px; border: 2px solid #f0f4e4; }
+            .textarea-scrollbar::-webkit-scrollbar-thumb:hover { background: #c9d3ae; }
+          `}</style>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsModalOpen(false)}></div>
+          <div className="relative bg-[#0b2920] w-full max-w-5xl max-h-[85vh] mt-12 rounded-[2rem] shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200 border-2 border-[#154636]">
+            
+            <div className="p-6 border-b border-[#154636] flex justify-between items-center bg-[#0b2920] z-10 sticky top-0">
+              <div>
+                <h3 className="text-2xl font-bold text-[#dce4c7]">Buat Business Model Canvas</h3>
+                <p className="text-sm text-[#9caf88] mt-1">Isi kotak-kotak di bawah sesuai dengan rencana usaha Anda.</p>
+              </div>
+              <button 
+                onClick={() => setIsModalOpen(false)}
+                className="w-10 h-10 rounded-full bg-[#154636] hover:bg-[#1d5c48] flex items-center justify-center text-[#dce4c7] transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="custom-scrollbar p-6 overflow-y-auto flex-1 bg-[#0b2920]">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                
+                {/* Form Group 1 */}
+                <div className="col-span-1 flex flex-col h-full bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                  <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Key Partners</label>
+                  <textarea name="keyPartners" value={formData.keyPartners} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[180px]" placeholder="Siapa mitra utama Anda?"></textarea>
+                </div>
+
+                {/* Form Group 2 */}
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col flex-1 bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                    <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Key Activities</label>
+                    <textarea name="keyActivities" value={formData.keyActivities} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Aktivitas kunci usaha?"></textarea>
+                  </div>
+                  <div className="flex flex-col flex-1 bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                    <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Key Resources</label>
+                    <textarea name="keyResources" value={formData.keyResources} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Sumber daya utama?"></textarea>
+                  </div>
+                </div>
+
+                {/* Form Group 3 */}
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col flex-1 bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                    <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Value Propositions</label>
+                    <textarea name="valuePropositions" value={formData.valuePropositions} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Nilai yang ditawarkan?"></textarea>
+                  </div>
+                  <div className="flex flex-col flex-1 bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                    <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Profit</label>
+                    <textarea name="profit" value={formData.profit} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Keuntungan finansial/sosial?"></textarea>
+                  </div>
+                </div>
+
+                {/* Form Group 4 */}
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col flex-1 bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                    <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Customer Relationship</label>
+                    <textarea name="customerRelationship" value={formData.customerRelationship} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Hubungan dgn pelanggan?"></textarea>
+                  </div>
+                  <div className="flex flex-col flex-1 bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                    <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Channels</label>
+                    <textarea name="channels" value={formData.channels} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Saluran pemasaran?"></textarea>
+                  </div>
+                </div>
+
+                {/* Form Group 5 */}
+                <div className="col-span-1 flex flex-col h-full bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                  <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Customer Segment</label>
+                  <textarea name="customerSegment" value={formData.customerSegment} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[180px]" placeholder="Target pelanggan?"></textarea>
+                </div>
+
+              </div>
+
+              {/* Bottom Row Forms */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div className="flex flex-col bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                  <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Cost Structure</label>
+                  <textarea name="costStructure" value={formData.costStructure} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Rincian biaya usaha?"></textarea>
+                </div>
+                <div className="flex flex-col bg-[#f0f4e4] rounded-[16px] p-4 shadow-inner focus-within:ring-4 focus-within:ring-[#7a8767]/30 transition-shadow">
+                  <label className="font-extrabold text-[0.9rem] mb-2 text-center text-[#7d8773] uppercase tracking-wider">Revenue Streams</label>
+                  <textarea name="revenueStreams" value={formData.revenueStreams} onChange={handleFormChange} onKeyDown={handleKeyDown} className="textarea-scrollbar flex-1 w-full border-0 bg-transparent text-[14px] font-medium text-[#536149] outline-none resize-none placeholder-[#a3ae94] min-h-[80px]" placeholder="Sumber pendapatan?"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 border-t border-[#154636] bg-[#0b2920] flex justify-end gap-3 z-10">
+              <button 
+                onClick={() => setIsModalOpen(false)}
+                className="px-6 py-2.5 rounded-full font-bold text-[#dce4c7] bg-[#154636] hover:bg-[#1d5c48] border border-[#2a5948] transition-colors shadow-sm"
+              >
+                Batal
+              </button>
+              <button 
+                onClick={handleGenerate}
+                className="px-8 py-2.5 rounded-full font-bold bg-[#dce4c7] text-[#0b2920] hover:bg-[#c9d3ae] transition-colors shadow-md active:scale-95 flex items-center gap-2"
+              >
+                Download PDF
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      )}
+
+    </div> {/* End of main print:hidden container */}
+
+      {/* ═══ PRINT ONLY: BMC RESULT ═══ */}
+      <div className="hidden print:flex w-full h-screen items-center justify-center bg-[#0b2920] p-4 absolute top-0 left-0">
+        <style>{`
+          @media print {
+            @page { size: landscape; margin: 0; }
+            body { 
+              background-color: #0b2920 !important; 
+              -webkit-print-color-adjust: exact !important; 
+              print-color-adjust: exact !important; 
+              margin: 0;
+            }
+          }
+        `}</style>
+        
+        <div className="w-full max-w-[297mm] mx-auto flex flex-col justify-center">
+          
+          {/* Top Logos Placeholder */}
+          <div className="flex justify-center items-center gap-3 mb-4">
+            <img src="/images/logo.png" alt="Logo" className="h-10 opacity-90 drop-shadow-md" />
+          </div>
+
+          <div className="text-center mb-6">
+            <h2 className="text-[2.5rem] font-black text-[#dce4c7] tracking-wider uppercase leading-none" 
+                style={{ 
+                  WebkitTextStroke: '1px #7a8767',
+                  textShadow: '2px 3px 0px #061711'
+                }}>
+              Business Model Canvas
+            </h2>
+          </div>
+          
+          {/* 5 Columns Grid System */}
+          <div className="grid grid-cols-5 gap-3 text-[#536149]">
+            
+            {/* Top Row: 5 columns */}
+            {/* Col 1: Key Partners */}
+            <div className="col-span-1 bg-[#f0f4e4] rounded-[24px] p-5 min-h-[380px] flex flex-col relative shadow-inner">
+              <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Key Partners</h4>
+              <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.keyPartners}</p>
+              <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                <Users className="w-10 h-10" strokeWidth={1.5} />
+              </div>
+            </div>
+
+            {/* Col 2: Key Activities & Key Resources */}
+            <div className="col-span-1 flex flex-col gap-3">
+              <div className="bg-[#f0f4e4] rounded-[24px] p-5 flex-1 flex flex-col relative min-h-[180px] shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Key Activities</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.keyActivities}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <BookOpen className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+              <div className="bg-[#f0f4e4] rounded-[24px] p-5 flex-1 flex flex-col relative min-h-[180px] shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Key Resources</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.keyResources}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <Settings className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+            </div>
+
+            {/* Col 3: Value Propositions & Profit */}
+            <div className="col-span-1 flex flex-col gap-3">
+              <div className="bg-[#f0f4e4] rounded-[24px] p-5 flex-1 flex flex-col relative min-h-[180px] shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Value Propositions</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.valuePropositions}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <TrendingUp className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+              <div className="bg-[#f0f4e4] rounded-[24px] p-5 flex-1 flex flex-col relative min-h-[180px] shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Profit</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.profit}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <CircleDollarSign className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+            </div>
+
+            {/* Col 4: Customer Relationship & Channels */}
+            <div className="col-span-1 flex flex-col gap-3">
+              <div className="bg-[#f0f4e4] rounded-[24px] p-5 flex-1 flex flex-col relative min-h-[180px] shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Customer Relationship</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.customerRelationship}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <Handshake className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+              <div className="bg-[#f0f4e4] rounded-[24px] p-5 flex-1 flex flex-col relative min-h-[180px] shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Channels</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.channels}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <Megaphone className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+            </div>
+
+            {/* Col 5: Customer Segment */}
+            <div className="col-span-1 bg-[#f0f4e4] rounded-[24px] p-5 min-h-[380px] flex flex-col relative shadow-inner">
+              <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Customer Segment</h4>
+              <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.customerSegment}</p>
+              <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                <Target className="w-10 h-10" strokeWidth={1.5} />
+              </div>
+            </div>
+
+            {/* Bottom Row: Cost Structure & Revenue Streams */}
+            <div className="col-span-5 grid grid-cols-2 gap-3 mt-1">
+              <div className="col-span-1 bg-[#f0f4e4] rounded-[24px] p-5 min-h-[140px] flex flex-col relative shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Cost Structure</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.costStructure}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <Factory className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+              <div className="col-span-1 bg-[#f0f4e4] rounded-[24px] p-5 min-h-[140px] flex flex-col relative shadow-inner">
+                <h4 className="font-extrabold text-[1rem] mb-3 text-center text-[#7d8773]">Revenue Streams</h4>
+                <p className="text-[13px] font-medium flex-grow whitespace-pre-wrap leading-relaxed z-10 relative">{formData.revenueStreams}</p>
+                <div className="absolute bottom-5 left-5 text-[#9caf88]">
+                  <Coins className="w-10 h-10" strokeWidth={1.5} />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </>
   );
 }
