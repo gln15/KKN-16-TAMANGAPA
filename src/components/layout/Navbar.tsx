@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMobileOlahOpen, setIsMobileOlahOpen] = useState(false);
 
   return (
-    <header className="bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm sticky top-0 z-50 transition-all">
+    <header className="print:hidden bg-surface/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm sticky top-0 z-50 transition-all">
       <nav className="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto relative">
 
         {/* Brand & Slogan */}

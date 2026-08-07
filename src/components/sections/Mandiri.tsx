@@ -643,7 +643,7 @@ export default function Mandiri() {
           
           {/* Top Logos Placeholder */}
           <div className="flex justify-center items-center gap-3 mb-4">
-            <img src="/images/logo.png" alt="Logo" className="h-10 opacity-90 drop-shadow-md" />
+            <img src="/images/logo.png" alt="Logo" className="h-20 opacity-90 drop-shadow-md" />
           </div>
 
           <div className="text-center mb-6">
