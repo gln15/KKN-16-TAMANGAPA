@@ -562,7 +562,7 @@ export default function Mandiri() {
               <div className="lg:hidden flex flex-col items-center justify-center py-4 mb-4">
                 <img src="/images/FEEDS.png" alt="Feeds" className="h-20 object-contain mb-8 drop-shadow-md" />
                 <h2
-                  className="font-black uppercase text-center leading-none whitespace-nowrap text-[7.5vw] sm:text-[5.5vw]"
+                  className="font-black uppercase text-center leading-none whitespace-nowrap text-[6vw] sm:text-[4.5vw]"
                   style={{ color: '#f0f4e4', fontFamily: '"Archivo Black", sans-serif', WebkitTextStroke: '1.5px #9ca3af' }}
                 >
                   Business Model Canvas
@@ -591,7 +591,7 @@ export default function Mandiri() {
                 <div className="hidden lg:flex col-span-3 flex-col items-center justify-center relative pb-8 border-b border-[#154636]/50 mb-2 h-full">
                   <div className="flex-1 flex items-center justify-center w-full">
                     <h2
-                      className="font-black uppercase text-center leading-none whitespace-nowrap text-[4vw] xl:text-[52px]"
+                      className="font-black uppercase text-center leading-none whitespace-nowrap text-[3.2vw] xl:text-[45px]"
                       style={{ color: '#f0f4e4', fontFamily: '"Archivo Black", sans-serif', WebkitTextStroke: '2px #9ca3af' }}
                     >
                       Business Model Canvas
