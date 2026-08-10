@@ -56,10 +56,13 @@ export default function MappingSurvey() {
                 <h3 className="text-2xl font-bold text-primary mb-4">Peta Wilayah Proker</h3>
                 <div className="text-on-surface-variant leading-relaxed space-y-4">
                   <p>
-                    Peta wilayah proker ini menggambarkan lokasi pelaksanaan edukasi persampahan di RT 07 RW 04, RT 02 RW 04, dan RT 02 RW 02 Kelurahan Tamangapa, serta persebaran sarana persampahan di sekitarnya. 
+                    Peta wilayah proker menggambarkan lokasi pelaksanaan kegiatan edukasi persampahan di Kelurahan Tamangapa, yang berfokus pada RT 07 RW 04, RT 02 RW 04, dan RT 02 RW 02. Ketiga wilayah tersebut menjadi sasaran utama kegiatan edukasi yang mencakup eco-brick, eco-enzyme, dan budidaya maggot. Peta juga menunjukkan jangkauan program kerja berdasarkan radius yang telah ditetapkan, sehingga dapat memberikan gambaran mengenai wilayah yang tercakup dalam pelaksanaan edukasi.
                   </p>
                   <p>
-                    Pemetaan ini membantu menunjukkan kondisi dan keterkaitan antara wilayah kegiatan dengan keberadaan TPS, TPA, pengolahan sampah organik, dan Bank Sampah Unit (BSU). Ke depannya, hasil pemetaan ini dapat menjadi dasar dalam menentukan wilayah prioritas dan kebutuhan pengelolaan persampahan di Kelurahan Tamangapa. Dengan demikian, kegiatan edukasi tidak hanya menjadi kegiatan satu kali, tetapi dapat ditindaklanjuti melalui optimalisasi sarana persampahan, penguatan peran masyarakat, dan pengembangan sistem pengelolaan sampah yang lebih terarah dan berkelanjutan.
+                    Selain menunjukkan wilayah kegiatan, peta ini memperlihatkan keterkaitan lokasi edukasi dengan persebaran sarana persampahan di sekitarnya, meliputi Tempat Pembuangan Sampah Sementara (TPS), Tempat Pengolahan Sampah Organik, Tempat Pembuangan Akhir (TPA), dan Bank Sampah Unit (BSU). Informasi tersebut membantu pengguna memahami kondisi persampahan secara spasial serta melihat keberadaan sarana yang dapat mendukung kegiatan edukasi dan pengelolaan sampah di wilayah sasaran.
+                  </p>
+                  <p>
+                    Ke depannya, peta ini dapat dimanfaatkan sebagai referensi dalam menentukan wilayah prioritas edukasi, mengidentifikasi kebutuhan sarana persampahan, serta merencanakan pengembangan kegiatan lanjutan. Dengan adanya informasi lokasi dan jangkauan yang lebih jelas, kegiatan pengelolaan persampahan diharapkan tidak berhenti pada pelaksanaan program kerja, tetapi dapat dikembangkan melalui pemanfaatan sarana yang tersedia, peningkatan partisipasi masyarakat, dan perluasan edukasi ke wilayah lain di Kelurahan Tamangapa.
                   </p>
                 </div>
               </div>
