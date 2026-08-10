@@ -5,6 +5,13 @@ import { Newspaper, Calendar, ExternalLink } from 'lucide-react';
 
 const allBerita = [
   {
+    id: 3,
+    title: "Lewat \"Tamangapa Beraksi\" Mahasiswa KKN Unhas Ajak Warga Kelola Sampah dan Jaga Lingkungan",
+    date: "06 Agustus 2026",
+    summary: "Mahasiswa Kuliah Kerja Nyata (KKN) Universitas Hasanuddin (Unhas) Posko Kelurahan Tamangapa melaksanakan Seminar Pemaparan Program Kerja mengusung program “Tamangapa Beraksi” untuk mengajak warga mengelola sampah dan menjaga lingkungan.",
+    link: "https://www.gerbangindonesiatimur.com/lewat-tamangapa-beraksi-mahasiswa-kkn-unhas-ajak-warga-kelola-sampah-dan-jaga-lingkungan/",
+  },
+  {
     id: 1,
     title: "Mahasiswa KKN Tematik Perubahan Iklim Unhas Luncurkan Program Tamangapa Beraksi Olah",
     date: "27 Juli 2026",

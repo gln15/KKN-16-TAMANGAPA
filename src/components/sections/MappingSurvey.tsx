@@ -1,4 +1,26 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
 export default function MappingSurvey() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedImage(null);
+      }
+    };
+
+    if (selectedImage) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedImage]);
+
   return (
     <div className="pt-4 pb-20 px-margin-desktop bg-surface min-h-screen">
       <div className="max-w-container-max mx-auto">
@@ -17,48 +39,80 @@ export default function MappingSurvey() {
             Pemetaan Geospasial Wilayah
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="flex flex-col gap-12">
             
-            {/* Peta Kewilayahan */}
-            <div className="bg-surface-container-lowest rounded-[32px] p-6 lg:p-8 shadow-sm border border-outline-variant/20 group">
-              <h3 className="text-xl font-bold text-primary mb-2">Peta Administrasi Kewilayahan</h3>
-              <p className="text-sm text-on-surface-variant mb-6">
-                Memvisualisasikan batas-batas kelurahan, infrastruktur jalan utama, letak fasilitas umum, dan sebaran permukiman warga (RT/RW).
-              </p>
-              
-              <div className="w-full aspect-[4/3] bg-surface-container rounded-2xl overflow-hidden relative border border-outline-variant/10 group-hover:shadow-lg transition-all duration-300">
+            {/* Peta Wilayah Proker */}
+            <div className="bg-surface-container-lowest rounded-[32px] overflow-hidden shadow-sm border border-outline-variant/20 group flex flex-col md:flex-col">
+              <div className="w-full bg-white relative border-b border-outline-variant/10 overflow-hidden">
                 {/* Ganti src dengan gambar peta wilayah asli Anda */}
                 <img 
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop" 
-                  alt="Peta Administrasi Kewilayahan" 
-                  className="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  src="/images/PETA_WILAYAH.jpg.jpeg" 
+                  alt="Peta Wilayah Proker" 
+                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setSelectedImage("/images/PETA_WILAYAH.jpg.jpeg")}
                 />
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <span className="bg-black/50 text-white px-4 py-2 rounded-full font-bold backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity">
-                    [Masukkan Peta Kewilayahan Anda Di Sini]
-                  </span>
+              </div>
+              <div className="p-6 md:p-10">
+                <h3 className="text-2xl font-bold text-primary mb-4">Peta Wilayah Proker</h3>
+                <div className="text-on-surface-variant leading-relaxed space-y-4">
+                  <p>
+                    Peta wilayah proker ini menggambarkan lokasi pelaksanaan edukasi persampahan di RT 07 RW 04, RT 02 RW 04, dan RT 02 RW 02 Kelurahan Tamangapa, serta persebaran sarana persampahan di sekitarnya. 
+                  </p>
+                  <p>
+                    Pemetaan ini membantu menunjukkan kondisi dan keterkaitan antara wilayah kegiatan dengan keberadaan TPS, TPA, pengolahan sampah organik, dan Bank Sampah Unit (BSU). Ke depannya, hasil pemetaan ini dapat menjadi dasar dalam menentukan wilayah prioritas dan kebutuhan pengelolaan persampahan di Kelurahan Tamangapa. Dengan demikian, kegiatan edukasi tidak hanya menjadi kegiatan satu kali, tetapi dapat ditindaklanjuti melalui optimalisasi sarana persampahan, penguatan peran masyarakat, dan pengembangan sistem pengelolaan sampah yang lebih terarah dan berkelanjutan.
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Peta Buffer Zone TPA */}
-            <div className="bg-surface-container-lowest rounded-[32px] p-6 lg:p-8 shadow-sm border border-outline-variant/20 group">
-              <h3 className="text-xl font-bold text-error mb-2">Peta Buffer Zone TPA Antang</h3>
-              <p className="text-sm text-on-surface-variant mb-6">
-                Menganalisis radius persebaran dampak pencemaran (bau, lindi, polusi udara) dari TPA Antang terhadap kawasan permukiman terdekat.
-              </p>
-              
-              <div className="w-full aspect-[4/3] bg-surface-container rounded-2xl overflow-hidden relative border border-outline-variant/10 group-hover:shadow-lg transition-all duration-300">
+            <div className="bg-surface-container-lowest rounded-[32px] overflow-hidden shadow-sm border border-outline-variant/20 group flex flex-col md:flex-col">
+              <div className="w-full bg-white relative border-b border-outline-variant/10 overflow-hidden">
                 {/* Ganti src dengan gambar peta buffer zone asli Anda */}
                 <img 
-                  src="https://images.unsplash.com/photo-1473172846931-31ba586940a4?q=80&w=2070&auto=format&fit=crop" 
+                  src="/images/PETA_BUFFER_ZONE.jpg.jpeg" 
                   alt="Peta Buffer Zone TPA" 
-                  className="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setSelectedImage("/images/PETA_BUFFER_ZONE.jpg.jpeg")}
                 />
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <span className="bg-black/50 text-white px-4 py-2 rounded-full font-bold backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity">
-                    [Masukkan Peta Buffer Zone Anda Di Sini]
-                  </span>
+              </div>
+              <div className="p-6 md:p-10">
+                <h3 className="text-2xl font-bold text-error mb-4">Peta Buffer Zone TPA Tamangapa</h3>
+                <div className="text-on-surface-variant leading-relaxed space-y-4">
+                  <p>
+                    Peta ini disusun sebagai bagian dari program kerja KKN Tematik Perubahan Iklim Gelombang 116 Kelurahan Tamangapa, Universitas Hasanuddin, untuk mengidentifikasi radius pengaruh (buffer zone) Tempat Pembuangan Akhir (TPA) Tamangapa terhadap permukiman warga di sekitarnya, sekaligus menjadi dasar penentuan prioritas intervensi program mitigasi perubahan iklim di tingkat RW.
+                  </p>
+                  
+                  <div className="mt-8 mb-8 bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-6">
+                    <h4 className="font-bold text-on-surface mb-4 text-lg">Interpretasi Kewilayahan:</h4>
+                    <ul className="space-y-6 list-none pl-0">
+                      <li className="flex gap-4 items-start">
+                        <div className="w-3 h-3 rounded-full bg-error mt-1.5 flex-shrink-0 shadow-sm"></div>
+                        <div>
+                          <strong className="text-on-surface">RW 004 berada tepat di zona merah (0–500 m)</strong>, yaitu radius terdekat dengan titik TPA. Wilayah ini merupakan area dengan tingkat kerentanan tertinggi, karena paling terpapar langsung oleh emisi gas metana, bau, air lindi (leachate), dan potensi vektor penyakit dari aktivitas TPA. RW 004 perlu menjadi prioritas utama program mitigasi, seperti penghijauan sabuk hijau, pemantauan kualitas udara dan air secara berkala, serta edukasi kesehatan lingkungan bagi warga.
+                        </div>
+                      </li>
+                      <li className="flex gap-4 items-start">
+                        <div className="w-3 h-3 rounded-full bg-primary mt-1.5 flex-shrink-0 shadow-sm"></div>
+                        <div>
+                          <strong className="text-on-surface">RW 003, RW 002, RW 007, dan RW 001 berada pada zona biru (1000–1500 m)</strong>, yaitu radius terjauh dari TPA dalam cakupan buffer yang dipetakan. Wilayah-wilayah ini tergolong sebagai area dengan dampak paling rendah dibanding RW lain dalam zona penyangga, namun tetap berpotensi terdampak secara tidak langsung, misalnya melalui penurunan kualitas udara pada musim tertentu atau limpasan air permukaan. RW-RW ini dapat menjadi sasaran program edukasi preventif dan penguatan sistem pengelolaan sampah rumah tangga berbasis 3R.
+                        </div>
+                      </li>
+                      <li className="flex gap-4 items-start">
+                        <div className="w-3 h-3 rounded-full bg-success mt-1.5 flex-shrink-0 shadow-sm"></div>
+                        <div>
+                          <strong className="text-on-surface">RW 006 berada di luar seluruh cakupan zona penyangga ({">"}1500 m dari TPA)</strong>, sehingga secara spasial tidak termasuk dalam wilayah terdampak langsung aktivitas TPA. Namun demikian, wilayah ini tetap relevan dimasukkan sebagai kelompok pembanding (kontrol) dalam program KKN, terutama untuk edukasi mitigasi perubahan iklim yang bersifat umum, mengingat isu iklim (seperti kualitas udara regional dan pengelolaan sampah kolektif) tidak terbatas hanya pada radius TPA.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p>
+                    TPA Tamangapa berkontribusi terhadap perubahan iklim melalui emisi gas metana (CH₄) hasil dekomposisi sampah organik secara anaerobik, yang berpotensi pemanasan global jauh lebih tinggi dibanding CO₂, serta melalui praktik pembakaran sampah terbuka yang menyumbang emisi karbon dan partikel polutan udara. 
+                  </p>
+                  <p>
+                    Pola zonasi ini menunjukkan adanya gradien kerentanan iklim yang menurun seiring bertambahnya jarak dari TPA — RW 004 sebagai titik kerentanan tertinggi hingga RW-RW di zona biru dan RW 006 yang relatif lebih aman. Kedepannya, hasil pemetaan ini dapat menjadi dasar bagi Kelurahan Tamangapa dalam menentukan wilayah prioritas dan kebutuhan intervensi terkait dampak TPA, sehingga alokasi program mitigasi dan adaptasi perubahan iklim dapat dilakukan secara lebih terarah dan proporsional, dengan penanganan paling intensif di RW 004 dan pendekatan preventif-edukatif di RW-RW lainnya.
+                  </p>
                 </div>
               </div>
             </div>
@@ -67,6 +121,32 @@ export default function MappingSurvey() {
         </div>
 
       </div>
+
+      {/* Lightbox/Popup Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-7xl w-full h-full flex items-center justify-center">
+            <button 
+              className="absolute top-4 right-4 md:top-8 md:right-8 text-white bg-black/50 hover:bg-black/70 rounded-full w-12 h-12 flex items-center justify-center transition-colors z-10"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Tutup peta"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img 
+              src={selectedImage} 
+              alt="Peta Diperbesar" 
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()} 
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
