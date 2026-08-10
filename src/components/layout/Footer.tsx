@@ -56,7 +56,7 @@ export default function Footer() {
             <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/edukasi">Edukasi Lingkungan</Link>
             <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/sehat">Lingkungan Sehat</Link>
             <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/mandiri">Masyarakat Mandiri</Link>
-            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/evaluasi">Galeri & Evaluasi</Link>
+            <Link className="text-white/80 hover:text-white transition-colors hover:translate-x-1 w-fit" href="/galeri">Galeri</Link>
           </div>
         </div>
 

@@ -63,7 +63,7 @@ export default function Navbar() {
 
           <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/sehat">Sehat</Link>
           <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/mandiri">Mandiri</Link>
-          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/evaluasi">Evaluasi</Link>
+          <Link className="text-on-surface-variant hover:text-primary transition-colors font-bold text-label-md" href="/galeri">Galeri</Link>
         </div>
       </nav>
 
@@ -93,7 +93,7 @@ export default function Navbar() {
           
           <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/sehat">Lingkungan Sehat</Link>
           <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/mandiri">Masyarakat Mandiri</Link>
-          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/evaluasi">Galeri & Evaluasi</Link>
+          <Link onClick={() => setIsMobileMenuOpen(false)} className="text-on-surface-variant hover:text-primary transition-colors font-bold text-lg" href="/galeri">Galeri</Link>
         </div>
       )}
     </header>
