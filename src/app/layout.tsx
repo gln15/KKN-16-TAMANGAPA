@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/images/logo.png",
+  },
+  verification: {
+    google: "xfqYyafko63mCkAjl886bpX7lavoF22dMpZ8uGeReYI",
   }
 };
 
