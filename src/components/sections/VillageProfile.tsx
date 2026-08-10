@@ -77,7 +77,7 @@ export default function VillageProfile() {
             <div className="bg-primary/5 border border-primary/10 p-6 rounded-[24px] flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
               <IconHome className="text-4xl text-primary mb-3" />
               <h4 className="font-bold text-on-surface mb-1">Total RT/RW</h4>
-              <p className="text-primary font-extrabold text-2xl">43 <span className="text-sm font-normal"k>RT</span> / 7 <span className="text-sm font-normal">RW</span></p>
+              <p className="text-primary font-extrabold text-2xl">43 <span className="text-sm font-normal">RT</span> / 7 <span className="text-sm font-normal">RW</span></p>
             </div>
 
             <div className="bg-primary/5 border border-primary/10 p-6 rounded-[24px] flex flex-col items-center justify-center text-center hover:bg-primary/10 transition-colors">
@@ -123,7 +123,7 @@ export default function VillageProfile() {
                 <h4 className="text-xl font-bold text-on-surface mb-1">Muhammad Sadli, SE., M.Si.</h4>
                 <p className="text-primary font-bold text-sm mb-4 uppercase tracking-wider">Lurah Tamangapa</p>
                 <p className="text-on-surface-variant text-sm leading-relaxed">
-                  Pemerintahan Kelurahan Tamangapa dipimpin oleh Bapak Muhammad Sadli. Dengan wilayah administratif yang luas dan menaungi 7 RW serta 41 RT, kelurahan ini terus berupaya meningkatkan kualitas pelayanan publik dan menangani isu-isu strategis, terutama yang berkaitan dengan tata kelola lingkungan dan kebersihan.
+                  Pemerintahan Kelurahan Tamangapa dipimpin oleh Bapak Muhammad Sadli. Dengan wilayah administratif yang luas dan menaungi 7 RW serta 43 RT, kelurahan ini terus berupaya meningkatkan kualitas pelayanan publik dan menangani isu-isu strategis, terutama yang berkaitan dengan tata kelola lingkungan dan kebersihan.
                 </p>
               </div>
             </div>
