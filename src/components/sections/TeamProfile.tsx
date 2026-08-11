@@ -7,6 +7,12 @@ export default function TeamProfile() {
 
   const teamMembers = [
     {
+      name: "Sutra Nobu, S.Kel., M.Sc., Ph.D.",
+      id: "Dosen Pembimbing Kegiatan",
+      faculty: "DPK",
+      image: "/team/DPK.jpeg"
+    },
+    {
       name: "Alif Allamah",
       id: "D011231088",
       faculty: "Teknik Sipil",
@@ -86,11 +92,39 @@ export default function TeamProfile() {
           <div className="lg:col-span-8">
             <div className="flex items-center gap-4 mb-8 border-b border-outline-variant/20 pb-4">
               <h3 className="font-headline-lg text-2xl lg:text-3xl text-primary font-bold">
-                Anggota Tim KKN
+                Tim KKN & Pembimbing
               </h3>
             </div>
+            
+            {/* Card Dosen Pembimbing */}
+            <div className="mb-8">
+              <div className="bg-surface-container-lowest p-6 lg:p-8 rounded-[24px] shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-primary/20 group flex flex-col sm:flex-row items-center text-center sm:text-left gap-6 lg:gap-8">
+                <div 
+                  className="w-32 h-32 lg:w-40 lg:h-40 flex-shrink-0 rounded-full overflow-hidden border-4 border-primary/20 shadow-inner cursor-pointer"
+                  onClick={() => setSelectedImage(teamMembers[0].image)}
+                >
+                  <img
+                    src={teamMembers[0].image}
+                    alt={teamMembers[0].name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs lg:text-sm font-bold rounded-full mb-3 w-fit mx-auto sm:mx-0">
+                    {teamMembers[0].id}
+                  </span>
+                  <h3 className="font-extrabold text-xl lg:text-2xl text-on-surface mb-2 leading-tight">
+                    {teamMembers[0].name}
+                  </h3>
+                  <p className="text-on-surface-variant text-sm lg:text-base">
+                    Mendampingi dan membimbing seluruh program kerja KKN di Kelurahan Tamangapa.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 lg:gap-6">
-              {teamMembers.map((member, idx) => (
+              {teamMembers.slice(1).map((member, idx) => (
                 <div key={idx} className="bg-surface-container-lowest p-4 lg:p-5 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-outline-variant/10 group flex flex-col items-center text-center">
                   <div 
                     className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-surface shadow-inner cursor-pointer"

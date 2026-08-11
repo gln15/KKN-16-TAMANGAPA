@@ -5,6 +5,13 @@ import { Newspaper, Calendar, ExternalLink } from 'lucide-react';
 
 const allBerita = [
   {
+    id: 4,
+    title: "Mahasiswa KKNT-PI Unhas Sosialisasikan Pola Hidup Bersih dan Sehat di SD Inpres Kajenjeng Makassar",
+    date: "11 Agustus 2026",
+    summary: "Mahasiswa Kuliah Kerja Nyata Tematik Perubahan Iklim (KKNT-PI) Gelombang 116 Unhas melaksanakan kegiatan Sosialisasi Perilaku Hidup Bersih dan Sehat (PHBS) bagi siswa Kelas 4 UPT SPF SD Inpres Kajenjeng.",
+    link: "https://www.ujungjari.com/2026/08/11/mahasiswa-kknt-pi-unhas-sosialisasikan-pola-hidup-bersih-dan-sehat-di-sd-inpres-kajenjeng-makassar/",
+  },
+  {
     id: 3,
     title: "Lewat \"Tamangapa Beraksi\" Mahasiswa KKN Unhas Ajak Warga Kelola Sampah dan Jaga Lingkungan",
     date: "06 Agustus 2026",
