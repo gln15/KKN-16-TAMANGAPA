@@ -9,7 +9,7 @@ export default function TeamProfile() {
     {
       name: "Sutra Nobu, S.Kel., M.Sc., Ph.D.",
       id: "Dosen Pembimbing Kegiatan",
-      faculty: "DPK",
+      faculty: "NIP. 198804072024124001",
       image: "/team/DPK.jpeg"
     },
     {
@@ -113,9 +113,12 @@ export default function TeamProfile() {
                   <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs lg:text-sm font-bold rounded-full mb-3 w-fit mx-auto sm:mx-0">
                     {teamMembers[0].id}
                   </span>
-                  <h3 className="font-extrabold text-xl lg:text-2xl text-on-surface mb-2 leading-tight">
+                  <h3 className="font-extrabold text-xl lg:text-2xl text-on-surface mb-1 leading-tight">
                     {teamMembers[0].name}
                   </h3>
+                  <p className="text-secondary font-bold text-xs lg:text-sm mb-3 opacity-90 mx-auto sm:mx-0">
+                    {teamMembers[0].faculty}
+                  </p>
                   <p className="text-on-surface-variant text-sm lg:text-base">
                     Mendampingi dan membimbing seluruh program kerja KKN di Kelurahan Tamangapa.
                   </p>
